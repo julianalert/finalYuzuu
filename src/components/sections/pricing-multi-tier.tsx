@@ -29,7 +29,7 @@ export function Plan({
       )}
     >
       <div className="self-stretch">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between mb-8">
           {badge && (
             <div className="order-last inline-flex rounded-full bg-mist-950/10 px-2 text-xs/6 font-medium text-mist-950 dark:bg-white/10 dark:text-white">
               {badge}
@@ -38,9 +38,9 @@ export function Plan({
 
           <h3 className="text-2xl/8 tracking-tight text-mist-950 dark:text-white">{name}</h3>
         </div>
-        <p className="mt-1 inline-flex gap-1 text-base/7">
-          <span className="text-mist-950 dark:text-white">{price}</span>
-          {period && <span className="text-mist-500 dark:text-mist-500">{period}</span>}
+        <p className="inline-flex items-baseline gap-1">
+          <span className="text-5xl/1 font-bold tracking-tight text-mist-950 dark:text-white">{price}</span>
+          {period && <span className="text-base/7 text-mist-500 dark:text-mist-500">{period}</span>}
         </p>
         <div className="mt-4 flex flex-col gap-4 text-sm/6 text-mist-700 dark:text-mist-400">{subheadline}</div>
         <ul className="mt-4 space-y-2 text-sm/6 text-mist-700 dark:text-mist-400">

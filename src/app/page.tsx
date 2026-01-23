@@ -30,6 +30,7 @@ export default function Page() {
         id="navbar"
         links={
           <>
+            <NavbarLink href="#brands">How it works?</NavbarLink>
             <NavbarLink href="#features">Use Cases</NavbarLink>
             <NavbarLink href="#testimonial">Testimonials</NavbarLink>
             <NavbarLink href="#pricing">Pricing</NavbarLink>
@@ -75,7 +76,7 @@ export default function Page() {
               Get my first 5 photos for $1
             </ButtonLink>
 
-            <PlainButtonLink href="#" size="lg">
+            <PlainButtonLink href="#brands" size="lg">
               See how it works <ArrowNarrowRightIcon />
             </PlainButtonLink>
           </div>
@@ -322,50 +323,48 @@ export default function Page() {
         <Testimonial
           quote={
             <p>
-              Oatmeal has completely transformed our customer support operations. To be fair, we weren't doing any
-              customer support at all so the bar was pretty low.
+              The pictures look amazing! Used them for my ads. They were perfect.
             </p>
           }
           img={
             <Image
-              src="/img/avatars/10-size-160.webp"
+              src="/img/avatars/amir.jpg"
               alt=""
               className="not-dark:bg-white/75 dark:bg-black/75"
               width={160}
               height={160}
             />
           }
-          name="Jordan Rogers"
-          byline="Founder at Anomaly"
+          name="Amir J Blake"
+          byline="Author of Make Britain Poor Again"
         />
         <Testimonial
           quote={
             <p>
-              We use Oatmeal's automation features to make cancellation requests disappear into a black hole, improving
-              our retention rates by over 300%.
+              We reshaped our whole brand with the help of Yuzuu's service. We're extremely happy with the results. 
             </p>
           }
           img={
             <Image
-              src="/img/avatars/15-size-160.webp"
+              src="/img/avatars/sarah.png"
               alt=""
               className="not-dark:bg-white/75 dark:bg-black/75"
               width={160}
               height={160}
             />
           }
-          name="Lynn Marshall"
-          byline="Founder at Pine Labs"
+          name="Sarah Marshall"
+          byline="Founder at Noomi"
         />
         <Testimonial
           quote={
             <p>
-              All the pictures where great! We launched a paid ads campaign on TikTok and got one of our best performance. Can't recommend enough!
+              All the pictures were great! We launched a paid ads campaign on TikTok and got one of our best performance. Can't recommend enough!
             </p>
           }
           img={
             <Image
-              src="/img/avatars/13-size-160.webp"
+              src="/img/avatars/ian.png"
               alt=""
               className="not-dark:bg-white/75 dark:bg-black/75"
               width={160}
@@ -374,63 +373,6 @@ export default function Page() {
           }
           name="Ian MacEachern"
           byline="Founder at Hymacs"
-        />
-        <Testimonial
-          quote={
-            <p>
-              Oatmeal has given us key insights into how much our customers absolutely hate using our product and how we
-              can improve it to stop them from leaving us.
-            </p>
-          }
-          img={
-            <Image
-              src="/img/avatars/12-size-160.webp"
-              alt=""
-              className="not-dark:bg-white/75 dark:bg-black/75"
-              width={160}
-              height={160}
-            />
-          }
-          name="John Walters"
-          byline="CPO at Orbital"
-        />
-        <Testimonial
-          quote={
-            <p>
-              As a solo founder, Oatmeal has been a lifesaver. It makes it look like Looply is an actual company with
-              multiple employees, when in reality it's just me and an AI.
-            </p>
-          }
-          img={
-            <Image
-              src="/img/avatars/11-size-160.webp"
-              alt=""
-              className="not-dark:bg-white/75 dark:bg-black/75"
-              width={160}
-              height={160}
-            />
-          }
-          name="Noah Gold"
-          byline="CEO at Looply"
-        />
-        <Testimonial
-          quote={
-            <p>
-              Thanks to Oatmeal, we've managed to cut our support costs in half by laying off dozens of employees, while
-              still improving response times and customer satisfaction.
-            </p>
-          }
-          img={
-            <Image
-              src="/img/avatars/14-size-160.webp"
-              alt=""
-              className="not-dark:bg-white/75 dark:bg-black/75"
-              width={160}
-              height={160}
-            />
-          }
-          name="Mark Levinson"
-          byline="COO at Quirk"
         />
       </TestimonialThreeColumnGrid>
       {/* FAQs */}
@@ -626,61 +568,57 @@ export default function Page() {
         plans={
           <>
             <Plan
-              name="Starter"
-              price="$12"
-              period="/mo"
-              subheadline={<p>Small teams getting started with shared inboxes</p>}
+              name="Product"
+              price="$27"
+              period="one-time payment"
+              subheadline={<p>Perfect for quick visuals need, product updates, or paid ads.</p>}
               features={[
-                'Shared inbox for up to 2 mailboxes',
-                'Tagging & assignment',
-                'Private notes',
-                'Automatic replies',
-                'Email support',
+                '3-5 Product Photos',
+                'Different angles and compositions',
+                'Direct communication with the artist',
+                '24 hours delivery',
+                'Unlimited revisions',
               ]}
               cta={
                 <SoftButtonLink href="#" size="lg">
-                  Start free trial
+                  Get your first 5 photos for $7
                 </SoftButtonLink>
               }
             />
             <Plan
-              name="Growth"
-              price="$49"
-              period="/mo"
-              subheadline={<p>Growing teams needing collaboration and insights</p>}
+              name="Product + Lifestyle"
+              price="$47"
+              period="one-time payment"
+              subheadline={<p>Perfect to launch a new product or update an existing PDP.</p>}
               badge="Most popular"
               features={[
-                'Everything in Starter',
-                'Inbox Agent',
-                'Unlimited mailboxes',
-                'Collision detection',
-                'Snippets and templates',
-                'Reporting dashboard',
-                'Slack integration',
+                '3-5 Product Photos',
+                '3-5 Lifestyle Photos',
+                'Direct communication with the artist',
+                '48 hours delivery',
+                'Unlimited revisions',
               ]}
               cta={
                 <ButtonLink href="#" size="lg">
-                  Start free trial
+                  Get your first 10 photos for $17
                 </ButtonLink>
               }
             />
             <Plan
-              name="Pro"
-              price="$299"
-              period="/mo"
-              subheadline={<p>Support-focused organizations and larger teams</p>}
+              name="Branding Package"
+              price="$97"
+              period="one-time payment"
+              subheadline={<p>Reshape your brand with a complete set of photos to use on your whole website.</p>}
               features={[
-                'Everything in Growth',
-                'Custom roles & permissions',
-                'Automation engine',
-                'API access',
-                'SLA tracking',
-                'SSO support',
-                'SOC 2 compliance',
+                '20 to 30 photos',
+                'Complete brand guidelines based on your ICP',
+                'Direct communication with the artist',
+                '72 hours delivery',
+                'Unlimited revisions',
               ]}
               cta={
                 <SoftButtonLink href="#" size="lg">
-                  Start free trial
+                  Get started - $97
                 </SoftButtonLink>
               }
             />
