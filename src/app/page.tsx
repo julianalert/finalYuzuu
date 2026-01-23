@@ -360,8 +360,7 @@ export default function Page() {
         <Testimonial
           quote={
             <p>
-              I've been using the spare time that Oatmeal has freed up to work not just one, but two other jobs, all
-              while hitting my core KPIs. My bosses have no idea.
+              All the pictures where great! We launched a paid ads campaign on TikTok and got one of our best performance. Can't recommend enough!
             </p>
           }
           img={
@@ -373,8 +372,8 @@ export default function Page() {
               height={160}
             />
           }
-          name="Rajat Singh"
-          byline="Head of Support at Concise"
+          name="Ian MacEachern"
+          byline="Founder at Hymacs"
         />
         <Testimonial
           quote={
