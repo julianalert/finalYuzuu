@@ -6,6 +6,7 @@ import { CheckmarkIcon } from '../icons/checkmark-icon'
 export function Plan({
   name,
   price,
+  originalPrice,
   period,
   subheadline,
   badge,
@@ -15,6 +16,7 @@ export function Plan({
 }: {
   name: ReactNode
   price: ReactNode
+  originalPrice?: ReactNode
   period?: ReactNode
   subheadline: ReactNode
   badge?: ReactNode
@@ -38,10 +40,34 @@ export function Plan({
 
           <h3 className="text-2xl/8 tracking-tight text-mist-950 dark:text-white">{name}</h3>
         </div>
-        <p className="inline-flex items-baseline gap-1">
-          <span className="text-5xl/1 font-bold tracking-tight text-mist-950 dark:text-white">{price}</span>
-          {period && <span className="text-base/7 text-mist-500 dark:text-mist-500">{period}</span>}
-        </p>
+        <div className="flex flex-col gap-1">
+          <p className="inline-flex items-baseline gap-1">
+            <span className="text-4xl/1 font-bold tracking-tight text-mist-950 dark:text-white">{price}</span>
+            {originalPrice ? (
+              <span className="inline-flex items-center gap-2">
+                <span className="text-base/7 line-through text-mist-500 dark:text-mist-600">{originalPrice}</span>
+                <span className="inline-flex rounded-full bg-orange-500/10 px-2 py-0.5 text-xs/6 font-semibold text-orange-500 dark:bg-orange-500/20 dark:text-orange-400">
+                  {(() => {
+                    try {
+                      const original = typeof originalPrice === 'string' ? parseFloat(originalPrice.replace(/[^0-9.]/g, '')) : 0
+                      const current = typeof price === 'string' ? parseFloat(price.replace(/[^0-9.]/g, '')) : 0
+                      if (original > 0 && current > 0) {
+                        const discount = Math.round((1 - current / original) * 100)
+                        return `Save ${discount}%`
+                      }
+                    } catch {}
+                    return 'Discount'
+                  })()}
+                </span>
+              </span>
+            ) : (
+              period && <span className="text-base/7 text-mist-500 dark:text-mist-500">{period}</span>
+            )}
+          </p>
+          {originalPrice && (
+            <p className="text-xs/6 text-mist-600 dark:text-mist-500">First order only</p>
+          )}
+        </div>
         <div className="mt-4 flex flex-col gap-4 text-sm/6 text-mist-700 dark:text-mist-400">{subheadline}</div>
         <ul className="mt-4 space-y-2 text-sm/6 text-mist-700 dark:text-mist-400">
           {features.map((feature, index) => (

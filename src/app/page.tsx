@@ -56,7 +56,7 @@ export default function Page() {
         }
         actions={
           <>
-            <ButtonLink href="#">Your first 5 photos for $1</ButtonLink>
+            <ButtonLink href="#pricing">Your first 5 photos for $7</ButtonLink>
           </>
         }
       />
@@ -72,8 +72,8 @@ export default function Page() {
         }
         cta={
           <div className="flex items-center gap-4">
-            <ButtonLink href="#" size="lg">
-              Get my first 5 photos for $1
+            <ButtonLink href="#pricing" size="lg">
+              Get my first 5 photos for $7
             </ButtonLink>
 
             <PlainButtonLink href="#brands" size="lg">
@@ -318,7 +318,7 @@ export default function Page() {
       <TestimonialThreeColumnGrid
         id="testimonial"
         headline="What our customers are saying"
-        subheadline={<p>We've given these customers a significant discount in exchange for their honest reviews.</p>}
+        
       >
         <Testimonial
           quote={
@@ -565,59 +565,62 @@ export default function Page() {
       <PricingMultiTier
         id="pricing"
         headline="Pricing to fit your business needs."
+        subheadline={<p>Not happy with the final pictures? We'll refund you. No questions asked.</p>}
         plans={
           <>
             <Plan
               name="Product"
-              price="$27"
+              price="$7"
+              originalPrice="$27"
               period="one-time payment"
               subheadline={<p>Perfect for quick visuals need, product updates, or paid ads.</p>}
               features={[
-                '3-5 Product Photos',
+                '5 Product Photos',
                 'Different angles and compositions',
                 'Direct communication with the artist',
                 '24 hours delivery',
                 'Unlimited revisions',
               ]}
               cta={
-                <SoftButtonLink href="#" size="lg">
+                <SoftButtonLink href="https://buy.stripe.com/14AbJ2bZI1dugRX4SveME04" size="lg" target="_blank" rel="noopener noreferrer">
                   Get your first 5 photos for $7
                 </SoftButtonLink>
               }
             />
             <Plan
               name="Product + Lifestyle"
-              price="$47"
+              price="$17"
+              originalPrice="$47"
               period="one-time payment"
               subheadline={<p>Perfect to launch a new product or update an existing PDP.</p>}
               badge="Most popular"
               features={[
-                '3-5 Product Photos',
-                '3-5 Lifestyle Photos',
+                '5 Product Photos',
+                '5 Lifestyle Photos',
                 'Direct communication with the artist',
                 '48 hours delivery',
                 'Unlimited revisions',
               ]}
               cta={
-                <ButtonLink href="#" size="lg">
+                <ButtonLink href="https://buy.stripe.com/fZudRa3tcbS8atzacPeME05" size="lg" target="_blank" rel="noopener noreferrer">
                   Get your first 10 photos for $17
                 </ButtonLink>
               }
             />
             <Plan
-              name="Branding Package"
+              name="Branding Pack"
               price="$97"
               period="one-time payment"
               subheadline={<p>Reshape your brand with a complete set of photos to use on your whole website.</p>}
               features={[
-                '20 to 30 photos',
+                '25 Product & Lifestyle photos',
                 'Complete brand guidelines based on your ICP',
                 'Direct communication with the artist',
                 '72 hours delivery',
                 'Unlimited revisions',
               ]}
               cta={
-                <SoftButtonLink href="#" size="lg">
+                <SoftButtonLink href="https://buy.stripe.com/cNidRad3Mf4kdFLdp1eME06" size="lg" target="_blank" rel="noopener noreferrer">
                   Get started - $97
                 </SoftButtonLink>
               }
