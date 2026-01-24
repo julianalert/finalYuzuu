@@ -11,6 +11,7 @@ import { ChevronIcon } from '@/components/icons/chevron-icon'
 import { CloudArrowUpIcon } from '@/components/icons/cloud-arrow-up-icon'
 import { SparklesIcon } from '@/components/icons/sparkles-icon'
 import { PhotoIcon } from '@/components/icons/photo-icon'
+import { ShieldExclamationIcon } from '@/components/icons/shield-exclamation-icon'
 import { CallToActionSimple } from '@/components/sections/call-to-action-simple'
 import { FAQsTwoColumnAccordion, Faq } from '@/components/sections/faqs-two-column-accordion'
 import { Feature, FeaturesTwoColumnWithDemos } from '@/components/sections/features-two-column-with-demos'
@@ -78,8 +79,8 @@ export default function Page() {
               Get my first 5 photos for $7
             </ButtonLink>
 
-            <p className="text-sm italic text-mist-700 dark:text-mist-400">
-              Unlimited revisions, money back guarantee
+            <p className="flex items-center gap-2 text-sm italic text-mist-700 dark:text-mist-400">
+              <ShieldExclamationIcon className="size-4" /> Unlimited revisions, money back guarantee
             </p>
           </div>
         }
