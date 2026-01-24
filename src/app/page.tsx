@@ -4,6 +4,8 @@ import { AnnouncementBadge } from '@/components/elements/announcement-badge'
 import { ButtonLink, PlainButtonLink, SoftButtonLink } from '@/components/elements/button'
 import { Link } from '@/components/elements/link'
 import { BeforeAfterSlider } from '@/components/elements/before-after-slider'
+import { BeforeAfterSideBySide } from '@/components/elements/before-after-side-by-side'
+import { BeforeAfterSideBySideExamples } from '@/components/elements/before-after-side-by-side-examples'
 import { ArrowNarrowRightIcon } from '@/components/icons/arrow-narrow-right-icon'
 import { ChevronIcon } from '@/components/icons/chevron-icon'
 import { CloudArrowUpIcon } from '@/components/icons/cloud-arrow-up-icon'
@@ -138,8 +140,163 @@ export default function Page() {
           footnote="Immediate impact on your sales."
         />
       </BrandsCardsMultiColumn>
-      {/* Features */}
+      {/* Top Features - Duplicated Cards */}
       <FeaturesTwoColumnWithDemos
+        id="top-features"
+        className="!pt-0"
+        features={
+          <>
+            <Feature
+              className="p-1"
+              demo={
+                <BeforeAfterSideBySide
+                  beforeImage={{
+                    src: '/img/products/noomiBefore.png',
+                    alt: 'Before product photo',
+                    width: 2000,
+                    height: 1400,
+                    className: 'bg-white',
+                  }}
+                  afterImage={{
+                    src: '/img/products/noomiAfter.png',
+                    alt: 'After product photo',
+                    width: 2000,
+                    height: 1400,
+                  }}
+                />
+              }
+              headline="PDP Update"
+              subheadline={
+                <p>
+                  We help you update your PDP with new photos that are more realistic and engaging.
+                </p>
+              }
+
+            />
+            <Feature
+              className="p-1"
+              demo={
+                <BeforeAfterSideBySide
+                  beforeImage={{
+                    src: '/img/products/littleBefore.jpg',
+                    alt: 'Before product photo',
+                    width: 2000,
+                    height: 1400,
+                  }}
+                  afterImage={{
+                    src: '/img/products/littleAfter.png',
+                    alt: 'After product photo',
+                    width: 2000,
+                    height: 1400,
+                  }}
+                />
+              }
+              headline="Quick Visuals Need"
+              subheadline={
+                <p>Sometimes, you need a quick visual to get your point across. You take a quick picture of your product and we make it look good.</p>
+              }
+            />
+            <Feature
+              className="p-1"
+              demo={
+                <BeforeAfterSideBySide
+                  beforeImage={{
+                    src: '/img/products/product3.png',
+                    alt: 'Before product photo',
+                    width: 2000,
+                    height: 1400,
+                  }}
+                  afterImage={{
+                    src: '/img/products/result3.png',
+                    alt: 'After product photo',
+                    width: 2000,
+                    height: 1400,
+                  }}
+                />
+              }
+              headline="Lifestyle Photos without the Hassle"
+              subheadline={
+                <p>We create lifestyle photos that are perfect for your product. No need to hire a model or book a studio.</p>
+              }
+            />
+            <Feature
+              className="p-1"
+              demo={
+                <BeforeAfterSideBySide
+                  beforeImage={{
+                    src: '/img/products/pwrrrUpdate.jpg',
+                    alt: 'Before product photo',
+                    width: 2000,
+                    height: 1400,
+                  }}
+                  afterImage={{
+                    src: '/img/products/pwrrr4.png',
+                    alt: 'After product photo',
+                    width: 2000,
+                    height: 1400,
+                  }}
+                />
+              }
+              headline="Conversion Rate Improvement"
+              subheadline={
+                <p>We turn bad AI photos into good ones. So you re establish trust with your customers. And sell more.</p>
+              }
+            />
+            <Feature
+              className="p-1"
+              demo={
+                <BeforeAfterSideBySide
+                  beforeImage={{
+                    src: '/img/products/bunnyLamp.jpeg',
+                    alt: 'Before product photo',
+                    width: 2000,
+                    height: 1400,
+                    className: 'bg-white',
+                  }}
+                  afterImage={{
+                    src: '/img/products/bunnyLampFinal.png',
+                    alt: 'After product photo',
+                    width: 2000,
+                    height: 1400,
+                  }}
+                />
+              }
+              headline="Product Launch"
+              subheadline={
+                <p>
+                  We create product & lifestyle photos to help you launch your product and get more sales.
+                </p>
+              }
+
+            />
+            <Feature
+              className="p-1"
+              demo={
+                <BeforeAfterSideBySide
+                  beforeImage={{
+                    src: '/img/products/bookCover.jpg',
+                    alt: 'Before product photo',
+                    width: 2000,
+                    height: 1400,
+                  }}
+                  afterImage={{
+                    src: '/img/products/bookAds.png',
+                    alt: 'After product photo',
+                    width: 2000,
+                    height: 1400,
+                  }}
+                />
+              }
+              headline="Paid Ads Materials"
+              subheadline={
+                <p>We create photos that are perfect for paid ads.</p>
+              }
+            />
+          </>
+        }
+      />
+      {/* Features */}
+      {/* <FeaturesTwoColumnWithDemos
         id="features"
         className="!pt-0"
         features={
@@ -298,7 +455,7 @@ export default function Page() {
             />
           </>
         }
-      />
+      /> */}
       {/* Stats */}
       <StatsWithGraph
         id="stats"
@@ -375,6 +532,143 @@ export default function Page() {
           byline="Founder at Hymacs"
         />
       </TestimonialThreeColumnGrid>
+      {/* More Examples - Duplicated Cards */}
+      <FeaturesTwoColumnWithDemos
+        id="more-examples"
+        className="!pt-0 [&>div>div]:!gap-y-0.5 [&>div>div]:!gap-x-2"
+        features={
+          <>
+            <Feature
+              className="!p-0 !bg-transparent [&>div:first-child]:!p-0 [&>div:last-child]:!hidden"
+              demo={
+                <BeforeAfterSideBySideExamples
+                  beforeImage={{
+                    src: '/img/products/sezaneBefore.png',
+                    alt: 'Before product photo',
+                    width: 2000,
+                    height: 1400,
+                    className: 'bg-white',
+                  }}
+                  afterImage={{
+                    src: '/img/products/sezaneAfter.png',
+                    alt: 'After product photo',
+                    width: 2000,
+                    height: 1400,
+                  }}
+                />
+              }
+              headline={null}
+              subheadline={null}
+            />
+            <Feature
+              className="!p-0 !bg-transparent [&>div:first-child]:!p-0 [&>div:last-child]:!hidden"
+              demo={
+                <BeforeAfterSideBySideExamples
+                  beforeImage={{
+                    src: '/img/products/hymacsBefore.png',
+                    alt: 'Before product photo',
+                    width: 2000,
+                    height: 1400,
+                  }}
+                  afterImage={{
+                    src: '/img/products/hymacsAfter.png',
+                    alt: 'After product photo',
+                    width: 2000,
+                    height: 1400,
+                  }}
+                />
+              }
+              headline={null}
+              subheadline={null}
+            />
+            <Feature
+              className="!p-0 !bg-transparent [&>div:first-child]:!p-0 [&>div:last-child]:!hidden"
+              demo={
+                <BeforeAfterSideBySideExamples
+                  beforeImage={{
+                    src: '/img/products/gragioBefore.jpg',
+                    alt: 'Before product photo',
+                    width: 2000,
+                    height: 1400,
+                  }}
+                  afterImage={{
+                    src: '/img/products/gragioAfter.png',
+                    alt: 'After product photo',
+                    width: 2000,
+                    height: 1400,
+                  }}
+                />
+              }
+              headline={null}
+              subheadline={null}
+            />
+            <Feature
+              className="!p-0 !bg-transparent [&>div:first-child]:!p-0 [&>div:last-child]:!hidden"
+              demo={
+                <BeforeAfterSideBySideExamples
+                  beforeImage={{
+                    src: '/img/products/bunnyLamp.jpeg',
+                    alt: 'Before product photo',
+                    width: 2000,
+                    height: 1400,
+                  }}
+                  afterImage={{
+                    src: '/img/products/lampAfter.png',
+                    alt: 'After product photo',
+                    width: 2000,
+                    height: 1400,
+                  }}
+                />
+              }
+              headline={null}
+              subheadline={null}
+            />
+            <Feature
+              className="!p-0 !bg-transparent [&>div:first-child]:!p-0 [&>div:last-child]:!hidden"
+              demo={
+                <BeforeAfterSideBySideExamples
+                  beforeImage={{
+                    src: '/img/products/pwrrrBefore.jpg',
+                    alt: 'Before product photo',
+                    width: 2000,
+                    height: 1400,
+                    className: 'bg-white',
+                  }}
+                  afterImage={{
+                    src: '/img/products/pwrrrAfter.png',
+                    alt: 'After product photo',
+                    width: 2000,
+                    height: 1400,
+                  }}
+                />
+              }
+              headline={null}
+              subheadline={null}
+            />
+            <Feature
+              className="!p-0 !bg-transparent [&>div:first-child]:!p-0 [&>div:last-child]:!hidden"
+              demo={
+                <BeforeAfterSideBySideExamples
+                  beforeImage={{
+                    src: '/img/products/beforeArea.png',
+                    alt: 'Before product photo',
+                    width: 2000,
+                    height: 1400,
+                  }}
+                  afterImage={{
+                    src: '/img/products/afterArea.png',
+                    alt: 'After product photo',
+                    width: 2000,
+                    height: 1400,
+                  }}
+                />
+              }
+              headline={null}
+              subheadline={null}
+            />
+          </>
+        }
+      />
       {/* FAQs */}
       <FAQsTwoColumnAccordion id="faqs" headline="Questions & Answers">
         <Faq
