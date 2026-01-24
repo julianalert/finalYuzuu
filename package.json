@@ -26,6 +26,8 @@
     "next": "^16",
     "react": "^19",
     "react-dom": "^19",
+    "resend": "^6.8.0",
+    "stripe": "^20.2.0",
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {

@@ -7,7 +7,50 @@ import Script from 'next/script'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Oatmeal Kit Demo',
+  title: 'AI Product Photos You Will Actually Use On Your PDPs - Yuzuu',
+  description:
+    'DFY Ultra-realistic product & lifestyle photos for e-commerce, without hiring models or booking a studio. Perfect for PDPs, ads, and social media. 24-48h delivery.',
+  keywords: [
+    'AI product photography',
+    'e-commerce photos',
+    'product images',
+    'lifestyle photography',
+    'AI photography service',
+    'PDP images',
+    'conversion optimization',
+  ],
+  authors: [{ name: 'Yuzuu' }],
+  creator: 'Yuzuu',
+  metadataBase: new URL('https://yuzuu.co'),
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://yuzuu.co',
+    siteName: 'Yuzuu',
+    title: 'AI Product Photos You Will Actually Use On Your PDPs - Yuzuu',
+    description:
+      'DFY Ultra-realistic product & lifestyle photos for e-commerce, without hiring models or booking a studio. 24-48h delivery.',
+    images: [
+      {
+        url: '/img/products/afterArea.png',
+        width: 2000,
+        height: 1400,
+        alt: 'Yuzuu AI Product Photography',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI Product Photos You Will Actually Use On Your PDPs - Yuzuu',
+    description:
+      'DFY Ultra-realistic product & lifestyle photos for e-commerce, without hiring models or booking a studio.',
+    creator: '@notanothermrktr',
+    images: ['/img/thumbnail.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function RootLayout({
