@@ -78,9 +78,9 @@ export default function Page() {
               Get my first 5 photos for $7
             </ButtonLink>
 
-            <PlainButtonLink href="#brands" size="lg">
-              See how it works <ArrowNarrowRightIcon />
-            </PlainButtonLink>
+            <p className="text-sm italic text-mist-700 dark:text-mist-400">
+              Unlimited revisions, money back guarantee
+            </p>
           </div>
         }
         demo={
@@ -128,7 +128,7 @@ export default function Page() {
             <SparklesIcon className="size-8 text-mist-950 dark:text-white" />
           }
           headline="2. We do our magic"
-          text="Your product is integrated into ultra-realistic scenes."
+          text="Your product is integrated into ultra-realistic scenes to improve the trustworthiness of your brand."
           footnote="24-48 hours delivery."
         />
         <BrandCard
@@ -136,8 +136,8 @@ export default function Page() {
             <PhotoIcon className="size-8 text-mist-950 dark:text-white" />
           }
           headline="3. You get conversion-optimized images"
-          text="You can use the images on your PDP, ads, social media, and more."
-          footnote="Immediate impact on your sales."
+          text="You finally can use pictures that don't make you look like a fraud."
+          footnote="+12.68% conversion rate improvement, based on 24 customers' use cases."
         />
       </BrandsCardsMultiColumn>
       {/* Top Features - Duplicated Cards */}
@@ -463,7 +463,7 @@ export default function Page() {
         headline="It's about making visual content that help e-commerce owners like you make more money."
         subheadline={
           <p>
-            We analyze your market, product and target audience. We understand data to create photos & videos that works. Aka that print $$$. Period.
+            We analyze your market, product, and audience to create photos and videos that build trust, and turn attention into revenue.
           </p>
           
         }
