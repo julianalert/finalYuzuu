@@ -59,7 +59,12 @@ export default function Page() {
         }
         actions={
           <>
-            <ButtonLink href="#pricing">Your first 5 photos for $7</ButtonLink>
+            <ButtonLink 
+              href="#pricing"
+              className="!bg-gradient-to-r !from-orange-500 !to-rose-500 !text-white !shadow-lg hover:!from-orange-600 hover:!to-rose-600"
+            >
+              Your first 5 photos for $7
+            </ButtonLink>
           </>
         }
       />
@@ -879,7 +884,13 @@ export default function Page() {
                 'Unlimited revisions to get the perfect photo',
               ]}
               cta={
-                <ButtonLink href="https://buy.stripe.com/14AbJ2bZI1dugRX4SveME04" size="lg" target="_blank" rel="noopener noreferrer">
+                <ButtonLink 
+                  href="https://buy.stripe.com/14AbJ2bZI1dugRX4SveME04" 
+                  size="lg" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="!bg-gradient-to-r !from-orange-500 !to-rose-500 !text-white !shadow-lg hover:!from-orange-600 hover:!to-rose-600"
+                >
                   Improve your PDP for $7
                 </ButtonLink>
               }

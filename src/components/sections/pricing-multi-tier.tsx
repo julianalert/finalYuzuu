@@ -34,9 +34,9 @@ export function Plan({
         <div className="flex items-center justify-between mb-8">
           {badge && (
             <div className={clsx(
-              'order-last inline-flex rounded-full px-3 py-1 text-xs/6 font-semibold',
+              'order-last inline-flex rounded-full px-2 py-0.5 text-xs/6 font-semibold',
               badge === 'First order offer' 
-                ? 'bg-gradient-to-r from-orange-500 to-rose-500 text-white shadow-lg'
+                ? 'bg-orange-500/10 text-orange-500 dark:bg-orange-500/20 dark:text-orange-400'
                 : 'bg-mist-950/10 text-mist-950 dark:bg-white/10 dark:text-white'
             )}>
               {badge}
