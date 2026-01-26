@@ -33,7 +33,12 @@ export function Plan({
       <div className="self-stretch">
         <div className="flex items-center justify-between mb-8">
           {badge && (
-            <div className="order-last inline-flex rounded-full bg-mist-950/10 px-2 text-xs/6 font-medium text-mist-950 dark:bg-white/10 dark:text-white">
+            <div className={clsx(
+              'order-last inline-flex rounded-full px-3 py-1 text-xs/6 font-semibold',
+              badge === 'First order offer' 
+                ? 'bg-gradient-to-r from-orange-500 to-rose-500 text-white shadow-lg'
+                : 'bg-mist-950/10 text-mist-950 dark:bg-white/10 dark:text-white'
+            )}>
               {badge}
             </div>
           )}

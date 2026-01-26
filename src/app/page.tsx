@@ -67,7 +67,7 @@ export default function Page() {
       <HeroLeftAlignedWithDemo
         id="hero"
         
-        headline="AI Product Photos that you'll use on your PDPs"
+        headline="AI Product Photos that don't look like AI"
         subheadline={
           <p>
             DFY Ultra-realistic product & lifestyle photos for e-commerce, without hiring models or booking a studio. Perfect for product pages, ads, social media, and more.
@@ -107,8 +107,8 @@ export default function Page() {
       {/* Brands */}
       <BrandsCardsMultiColumn
         id="brands"
-        eyebrow="How it works?"
-        headline="Every pixel that screams AI costs you money."
+        eyebrow="Every pixel that screams AI costs you money"
+        headline="AI Product Photos that you'll use on your PDPs."
           subheadline={
             <p>
               Visitors don't say "this looks fake", they just leave. <br />
@@ -136,7 +136,7 @@ export default function Page() {
           logo={
             <PhotoIcon className="size-8 text-mist-950 dark:text-white" />
           }
-          headline="3. You get conversion-optimized images"
+          headline="3. You get images you'll use on your PDPs"
           text="You finally can use pictures that don't make you look like a fraud."
           footnote="+12.68% conversion rate improvement, based on 24 customers' use cases."
         />
@@ -868,6 +868,7 @@ export default function Page() {
               price="$7"
               originalPrice="$47"
               period="one-time payment"
+              badge="First order offer"
               subheadline={<p>Perfect for quick visuals need, launching or updating a new product.</p>}
               features={[
                 '5 ultra-realistic photos',
