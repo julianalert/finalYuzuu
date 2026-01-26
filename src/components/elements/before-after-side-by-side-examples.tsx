@@ -1,5 +1,7 @@
 import { clsx } from 'clsx/lite'
 import Image from 'next/image'
+import { XMarkIcon } from '@/components/icons/x-mark-icon'
+import { CheckmarkIcon } from '@/components/icons/checkmark-icon'
 
 interface BeforeAfterSideBySideExamplesProps {
   beforeImage: {
@@ -36,7 +38,8 @@ export function BeforeAfterSideBySideExamples({
           className={clsx('w-full h-full object-cover', beforeImage.className)}
         />
         {/* Before Label */}
-        <div className="absolute top-4 left-4 bg-black/50 text-white px-3 py-1.5 rounded-md text-sm font-medium backdrop-blur-sm">
+        <div className="absolute top-4 left-4 flex items-center gap-1.5 bg-rose-50 text-rose-700 dark:bg-rose-950/40 dark:text-rose-300 px-3 py-1.5 rounded-md text-sm font-medium">
+          <XMarkIcon className="size-3.5" />
           Before
         </div>
       </div>
@@ -54,7 +57,8 @@ export function BeforeAfterSideBySideExamples({
           className={clsx('w-full h-full object-cover', afterImage.className)}
         />
         {/* After Label */}
-        <div className="absolute top-4 right-4 bg-black/50 text-white px-3 py-1.5 rounded-md text-sm font-medium backdrop-blur-sm">
+        <div className="absolute top-4 right-4 flex items-center gap-1.5 bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300 px-3 py-1.5 rounded-md text-sm font-medium">
+          <CheckmarkIcon className="size-3.5" />
           After
         </div>
       </div>

@@ -864,59 +864,63 @@ export default function Page() {
         plans={
           <>
             <Plan
-              name="Product"
+              name="Single Product"
               price="$7"
               originalPrice="$27"
               period="one-time payment"
-              subheadline={<p>Perfect for quick visuals need, product updates, or paid ads.</p>}
+              subheadline={<p>Perfect for quick visuals need, launching or updating a new product.</p>}
               features={[
-                '5 Product Photos',
-                'Different angles and compositions',
+                '5 ultra-realistic photos',
+                'Product + Lifestyle mix',
+                'PDP, ads & socials ready',
                 'Direct communication with the artist',
                 '24 hours delivery',
-                'Unlimited revisions',
+                'Unlimited revisions to get the perfect photo',
               ]}
               cta={
                 <SoftButtonLink href="https://buy.stripe.com/14AbJ2bZI1dugRX4SveME04" size="lg" target="_blank" rel="noopener noreferrer">
-                  Get your first 5 photos for $7
+                  Improve your PDP for $7
                 </SoftButtonLink>
               }
             />
             <Plan
-              name="Product + Lifestyle"
-              price="$17"
-              originalPrice="$47"
+              name="Essentials Pack"
+              price="$97"
               period="one-time payment"
-              subheadline={<p>Perfect to launch a new product or update an existing PDP.</p>}
+              subheadline={<p>Perfect to launch or update a collection of products.</p>}
               badge="Most popular"
               features={[
-                '5 Product Photos',
-                '5 Lifestyle Photos',
+                'Up to 5 products covered',
+                '25 cohesive photos (product + lifestyle)',
+                'Consistent lighting & mood across SKUs',
+                'Designed for PDPs, collections & ads',
                 'Direct communication with the artist',
                 '48 hours delivery',
                 'Unlimited revisions',
               ]}
               cta={
-                <ButtonLink href="https://buy.stripe.com/fZudRa3tcbS8atzacPeME05" size="lg" target="_blank" rel="noopener noreferrer">
-                  Get your first 10 photos for $17
+                <ButtonLink href="https://buy.stripe.com/3cIbJ27Js2hygRXacPeME09" size="lg" target="_blank" rel="noopener noreferrer">
+                  Get started for $97
                 </ButtonLink>
               }
             />
             <Plan
               name="Branding Pack"
-              price="$97"
+              price="$297"
               period="one-time payment"
-              subheadline={<p>Reshape your brand with a complete set of photos to use on your whole website.</p>}
+              subheadline={<p>For brands that want a recognizable, premium look everywhere.</p>}
               features={[
-                '25 Product & Lifestyle photos',
-                'Complete brand guidelines based on your ICP',
+                'Full product & lifestyle photoshoot',
+                'Visual direction based on your ICPs',
+                'Consistent brand identity across all visuals',
+                'Usable across website, ads & socials',
                 'Direct communication with the artist',
                 '72 hours delivery',
                 'Unlimited revisions',
               ]}
               cta={
-                <SoftButtonLink href="https://buy.stripe.com/cNidRad3Mf4kdFLdp1eME06" size="lg" target="_blank" rel="noopener noreferrer">
-                  Get started - $97
+                <SoftButtonLink href="https://buy.stripe.com/4gM6oI8NwaO48lr70DeME08" size="lg" target="_blank" rel="noopener noreferrer">
+                  Get started - $297
                 </SoftButtonLink>
               }
             />
