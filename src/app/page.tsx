@@ -866,7 +866,7 @@ export default function Page() {
             <Plan
               name="Single Product"
               price="$7"
-              originalPrice="$27"
+              originalPrice="$47"
               period="one-time payment"
               subheadline={<p>Perfect for quick visuals need, launching or updating a new product.</p>}
               features={[
@@ -878,9 +878,9 @@ export default function Page() {
                 'Unlimited revisions to get the perfect photo',
               ]}
               cta={
-                <SoftButtonLink href="https://buy.stripe.com/14AbJ2bZI1dugRX4SveME04" size="lg" target="_blank" rel="noopener noreferrer">
+                <ButtonLink href="https://buy.stripe.com/14AbJ2bZI1dugRX4SveME04" size="lg" target="_blank" rel="noopener noreferrer">
                   Improve your PDP for $7
-                </SoftButtonLink>
+                </ButtonLink>
               }
             />
             <Plan
@@ -899,9 +899,9 @@ export default function Page() {
                 'Unlimited revisions',
               ]}
               cta={
-                <ButtonLink href="https://buy.stripe.com/3cIbJ27Js2hygRXacPeME09" size="lg" target="_blank" rel="noopener noreferrer">
+                <SoftButtonLink href="https://buy.stripe.com/3cIbJ27Js2hygRXacPeME09" size="lg" target="_blank" rel="noopener noreferrer">
                   Get started for $97
-                </ButtonLink>
+                </SoftButtonLink>
               }
             />
             <Plan
