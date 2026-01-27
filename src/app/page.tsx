@@ -877,11 +877,13 @@ export default function Page() {
               subheadline={<p>Perfect for quick visuals need, launching or updating a new product.</p>}
               features={[
                 '5 ultra-realistic photos',
-                'Product + Lifestyle mix',
+                'Studio + Lifestyle mix',
+                '4K Resolution',
                 'PDP, ads & socials ready',
-                'Direct communication with the artist',
-                '24 hours delivery',
-                'Unlimited revisions to get the perfect photo',
+                'Visual direction based on your ICPs',
+                'Consistent brand identity across all visuals',
+                '48 hours delivery',
+                'Unlimited revisions',
               ]}
               cta={
                 <ButtonLink 
@@ -903,11 +905,13 @@ export default function Page() {
               badge="Most popular"
               features={[
                 'Up to 5 products covered',
-                '25 cohesive photos (product + lifestyle)',
+                '25 ultra-realistic photos (studio + lifestyle)',
+                '4K Resolution',
+                'PDP, ads & socials ready',
                 'Consistent lighting & mood across SKUs',
-                'Designed for PDPs, collections & ads',
-                'Direct communication with the artist',
-                '48 hours delivery',
+                'Visual direction based on your ICPs',
+                'Consistent brand identity across all visuals',
+                '72 hours delivery',
                 'Unlimited revisions',
               ]}
               cta={
@@ -922,12 +926,12 @@ export default function Page() {
               period="one-time payment"
               subheadline={<p>For brands that want a recognizable, premium look everywhere.</p>}
               features={[
-                'Full product & lifestyle photoshoot',
-                'Visual direction based on your ICPs',
+                'Up to 20 products covered',
+                '100 ultra-realistic photos (studio + lifestyle) per product',
                 'Consistent brand identity across all visuals',
                 'Usable across website, ads & socials',
                 'Direct communication with the artist',
-                '72 hours delivery',
+                '5-days delivery',
                 'Unlimited revisions',
               ]}
               cta={

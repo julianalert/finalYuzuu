@@ -1,5 +1,6 @@
 import { clsx } from 'clsx/lite'
 import type { ComponentProps, ReactNode } from 'react'
+import { useId } from 'react'
 import { Section } from '../elements/section'
 import { CheckmarkIcon } from '../icons/checkmark-icon'
 
@@ -23,6 +24,8 @@ export function Plan({
   features: ReactNode[]
   cta: ReactNode
 } & ComponentProps<'div'>) {
+  const planId = useId()
+  
   return (
     <div
       className={clsx(
@@ -69,15 +72,28 @@ export function Plan({
               period && <span className="text-base/7 text-mist-500 dark:text-mist-500">{period}</span>
             )}
           </p>
-          {originalPrice && (
-            <p className="text-xs/6 text-mist-600 dark:text-mist-500">First order only</p>
-          )}
         </div>
         <div className="mt-4 flex flex-col gap-4 text-sm/6 text-mist-700 dark:text-mist-400">{subheadline}</div>
         <ul className="mt-4 space-y-2 text-sm/6 text-mist-700 dark:text-mist-400">
           {features.map((feature, index) => (
             <li key={index} className="flex gap-4">
-              <CheckmarkIcon className="h-lh shrink-0 stroke-mist-950 dark:stroke-white" />
+              <svg
+                width={13}
+                height={13}
+                viewBox="0 0 13 13"
+                fill="none"
+                strokeWidth={1}
+                role="image"
+                className="h-lh shrink-0 inline-block"
+              >
+                <defs>
+                  <linearGradient id={`${planId}-gradient-${index}`} x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#f97316" />
+                    <stop offset="100%" stopColor="#f43f5e" />
+                  </linearGradient>
+                </defs>
+                <path d="M1.5 6.5L5.5 11.5L11.5 1.5" strokeLinecap="round" strokeLinejoin="round" stroke={`url(#${planId}-gradient-${index})`} />
+              </svg>
               <p>{feature}</p>
             </li>
           ))}
