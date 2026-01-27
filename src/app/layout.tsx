@@ -21,20 +21,20 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Yuzuu' }],
   creator: 'Yuzuu',
-  metadataBase: new URL('https://yuzuu.co'),
+  metadataBase: new URL('https://www.yuzuu.co'),
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://yuzuu.co',
+    url: 'https://www.yuzuu.co',
     siteName: 'Yuzuu',
     title: 'AI Product Photos You Will Actually Use On Your PDPs - Yuzuu',
     description:
       'DFY Ultra-realistic product & lifestyle photos for e-commerce, without hiring models or booking a studio. 24-48h delivery.',
     images: [
       {
-        url: '/img/products/afterArea.png',
-        width: 2000,
-        height: 1400,
+        url: 'https://www.yuzuu.co/img/thumbnail.png',
+        width: 1200,
+        height: 630,
         alt: 'Yuzuu AI Product Photography',
       },
     ],
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     description:
       'DFY Ultra-realistic product & lifestyle photos for e-commerce, without hiring models or booking a studio.',
     creator: '@notanothermrktr',
-    images: ['/img/thumbnail.png'],
+    images: ['https://www.yuzuu.co/img/thumbnail.png'],
   },
   robots: {
     index: true,
