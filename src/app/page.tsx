@@ -25,7 +25,7 @@ import {
   NavbarWithLinksActionsAndCenteredLogo,
 } from '@/components/sections/navbar-with-links-actions-and-centered-logo'
 import { BrandCard, BrandsCardsMultiColumn } from '@/components/sections/brands-cards-multi-column'
-
+import { AfterImagesRowSection } from '@/components/sections/after-images-row'
 export default function Page() {
   return (
     <>
@@ -90,29 +90,37 @@ export default function Page() {
           </div>
         }
         demo={
-          <BeforeAfterSlider
-            className="rounded-lg"
-            wallpaper="blue"
-            placement="bottom"
-            beforeImage={{
-              src: '/img/products/afterArea.png',
-              alt: 'Before product photo',
-              width: 2000,
-              height: 1400,
-            }}
-            afterImage={{
-              src: '/img/products/beforeArea.png',
-              alt: 'After product photo',
-              width: 2000,
-              height: 1400,
-            }}
-          />
+          <>
+            <AfterImagesRowSection />
+            {/* <BeforeAfterSlider
+              className="rounded-lg"
+              wallpaper="blue"
+              placement="bottom"
+              beforeImage={{
+                src: '/img/products/afterArea.png',
+                alt: 'Before product photo',
+                width: 2000,
+                height: 1400,
+              }}
+              afterImage={{
+                src: '/img/products/beforeArea.png',
+                alt: 'After product photo',
+                width: 2000,
+                height: 1400,
+              }}
+            />
+            */}
+          </>
         }
       />
       {/* Brands */}
       <BrandsCardsMultiColumn
         id="brands"
-        eyebrow="Every pixel that screams AI costs you money"
+        eyebrow={
+          <span className="bg-gradient-to-r from-orange-500 to-rose-500 bg-clip-text font-semibold text-transparent">
+            Every pixel that screams AI costs you money
+          </span>
+        }
         headline="AI Product Photos that you'll use on your PDPs."
           subheadline={
             <p>
@@ -465,7 +473,11 @@ export default function Page() {
       {/* Stats */}
       <StatsWithGraph
         id="stats"
-        eyebrow="It's not about making beautiful photos"
+        eyebrow={
+          <span className="bg-gradient-to-r from-orange-500 to-rose-500 bg-clip-text font-semibold text-transparent">
+            It's not about making beautiful photos
+          </span>
+        }
         headline="It's about making visual content that help e-commerce owners like you make more money."
         subheadline={
           <p>
