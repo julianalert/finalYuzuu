@@ -75,6 +75,18 @@ export default function RootLayout({
           data-token="a1af78f4-e22c-412d-9149-42af8e3897e4"
           strategy="afterInteractive"
         />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17912302186"
+          strategy="afterInteractive"
+        />
+        <Script id="google-adwords" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17912302186');
+          `}
+        </Script>
         <>
           <Main>{children}</Main>
 
