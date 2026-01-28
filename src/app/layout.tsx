@@ -7,9 +7,9 @@ import Script from 'next/script'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'AI Product Photos You Will Actually Use On Your PDPs - Yuzuu',
+  title: 'AI Product Photos that do not look like AI - Yuzuu',
   description:
-    'DFY Ultra-realistic product & lifestyle photos for e-commerce, without hiring models or booking a studio. Perfect for PDPs, ads, and social media. 24-48h delivery.',
+    'DFY Ultra-realistic studio & lifestyle photos for e-commerce, without hiring models or booking a studio. Perfect for PDPs, ads, and social media. 24-48h delivery.',
   keywords: [
     'AI product photography',
     'e-commerce photos',
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://www.yuzuu.co',
     siteName: 'Yuzuu',
-    title: 'AI Product Photos You Will Actually Use On Your PDPs - Yuzuu',
+    title: 'AI Product Photos that do not look like AI - Yuzuu',
     description:
-      'DFY Ultra-realistic product & lifestyle photos for e-commerce, without hiring models or booking a studio. 24-48h delivery.',
+      'DFY Ultra-realistic studio & lifestyle photos for e-commerce, without hiring models or booking a studio. 24-48h delivery.',
     images: [
       {
         url: 'https://www.yuzuu.co/img/thumbnail.png',
@@ -41,9 +41,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Product Photos You Will Actually Use On Your PDPs - Yuzuu',
+    title: 'AI Product Photos that do not look like AI - Yuzuu',
     description:
-      'DFY Ultra-realistic product & lifestyle photos for e-commerce, without hiring models or booking a studio.',
+      'DFY Ultra-realistic studio & lifestyle photos for e-commerce, without hiring models or booking a studio.',
     creator: '@notanothermrktr',
     images: ['https://www.yuzuu.co/img/thumbnail.png'],
   },
@@ -83,7 +83,7 @@ export default function RootLayout({
               <Container className="flex items-center justify-between gap-10 text-sm/7">
                 <div className="text-mist-600 dark:text-mist-500">© 2025 Yuzuu, Inc | Service delivered with 🧡 from 🇫🇷 </div>
                 <div className="flex items-center gap-4 sm:gap-10">
-                  <SocialLink href="https://x.com/notanothermrktr" name="X">
+                  <SocialLink href="https://x.com/julianyuzuu" name="X">
                     <XIcon />
                   </SocialLink>
                 </div>

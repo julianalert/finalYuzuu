@@ -75,7 +75,7 @@ export default function Page() {
         headline="AI Product Photos that don't look like AI"
         subheadline={
           <p>
-            DFY Ultra-realistic product & lifestyle photos for e-commerce, without hiring models or booking a studio. Perfect for product pages, ads, social media, and more.
+            DFY Ultra-realistic studio & lifestyle photos for e-commerce, without hiring models or booking a studio. Perfect for product pages, ads, social media, and more.
           </p>
         }
         cta={
