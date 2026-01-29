@@ -1,5 +1,6 @@
 import Image from 'next/image'
 
+import { Container } from '@/components/elements/container'
 import { AnnouncementBadge } from '@/components/elements/announcement-badge'
 import { ButtonLink, PlainButtonLink, SoftButtonLink } from '@/components/elements/button'
 import { Link } from '@/components/elements/link'
@@ -955,6 +956,32 @@ export default function Page() {
           </>
         }
       />
+      {/* Pack examples */}
+      <section className="py-16" aria-labelledby="pack-examples-heading">
+        <Container className="flex flex-col gap-10">
+          
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            <div className="relative overflow-hidden rounded-xl bg-mist-200 dark:bg-mist-800 aspect-[4/3]">
+              <Image
+                src="/img/examples/example1.png"
+                alt="Example result 1 – pack illustration"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, 50vw"
+              />
+            </div>
+            <div className="relative overflow-hidden rounded-xl bg-mist-200 dark:bg-mist-800 aspect-[4/3]">
+              <Image
+                src="/img/examples/example2.png"
+                alt="Example result 2 – pack illustration"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, 50vw"
+              />
+            </div>
+          </div>
+        </Container>
+      </section>
       {/* Call To Action */}
       <CallToActionSimple
         id="call-to-action"
