@@ -80,7 +80,11 @@ export default function Page() {
         }
         cta={
           <div className="flex items-center gap-4">
-            <ButtonLink href="#pricing" size="lg">
+            <ButtonLink
+              href="#pricing"
+              size="lg"
+              className="!bg-gradient-to-r !from-orange-500 !to-rose-500 !text-white !shadow-lg hover:!from-orange-600 hover:!to-rose-600"
+            >
               Get my first 5 photos for $7
             </ButtonLink>
 
