@@ -5,7 +5,6 @@ import { AnnouncementBadge } from '@/components/elements/announcement-badge'
 import { ButtonLink, PlainButtonLink, SoftButtonLink } from '@/components/elements/button'
 import { Link } from '@/components/elements/link'
 import { BeforeAfterSlider } from '@/components/elements/before-after-slider'
-import { BeforeAfterSideBySide } from '@/components/elements/before-after-side-by-side'
 import { BeforeAfterSideBySideExamples } from '@/components/elements/before-after-side-by-side-examples'
 import { ArrowNarrowRightIcon } from '@/components/icons/arrow-narrow-right-icon'
 import { ChevronIcon } from '@/components/icons/chevron-icon'
@@ -35,7 +34,7 @@ export default function Page() {
         links={
           <>
             <NavbarLink href="#brands">How it works?</NavbarLink>
-            <NavbarLink href="#features">Use Cases</NavbarLink>
+            <NavbarLink href="#top-features">Use Cases</NavbarLink>
             <NavbarLink href="#testimonial">Testimonials</NavbarLink>
             <NavbarLink href="#pricing">Pricing</NavbarLink>
           </>
@@ -122,11 +121,11 @@ export default function Page() {
             Every pixel that screams AI costs you money
           </span>
         }
-        headline="AI Product Photos that you'll use on your PDPs."
+        headline="AI Product Photos that you won't be ashamed to use."
           subheadline={
             <p>
               Visitors don't say "this looks fake", they just leave. <br />
-              <span className="font-semibold">So we create photos & videos that feel real enough to trust.</span>
+              <span className="font-semibold">We create studio and lifestyle photos so realistic people don’t question them.</span>
             </p>
           }
       >
@@ -134,8 +133,8 @@ export default function Page() {
           logo={
             <CloudArrowUpIcon className="size-8 text-mist-950 dark:text-white" />
           }
-          headline="1. Send your product details"
-          text="You send us your product photo, your brand guidelines and your target audience."
+          headline="1. Send your product info"
+          text="You send us your product photos, your brand guidelines and your target audience."
           footnote="Takes 2 minutes."
         />
         <BrandCard
@@ -150,7 +149,7 @@ export default function Page() {
           logo={
             <PhotoIcon className="size-8 text-mist-950 dark:text-white" />
           }
-          headline="3. You get images you'll use on your PDPs"
+          headline="3. You get images that don't scream AI"
           text="You finally can use pictures that don't make you look like a fraud."
           footnote="+12.68% conversion rate improvement, based on 24 customers' use cases."
         />
@@ -164,147 +163,95 @@ export default function Page() {
             <Feature
               className="p-1"
               demo={
-                <BeforeAfterSideBySide
-                  beforeImage={{
-                    src: '/img/products/noomiBefore.png',
-                    alt: 'Before product photo',
-                    width: 2000,
-                    height: 1400,
-                    className: 'bg-white',
-                  }}
-                  afterImage={{
-                    src: '/img/products/noomiAfter.png',
-                    alt: 'After product photo',
-                    width: 2000,
-                    height: 1400,
-                  }}
-                />
+                <div className="aspect-video overflow-hidden">
+                  <Image
+                    src="/img/use-cases/creating-new-brand.png"
+                    alt="Creating a new brand"
+                    width={2000}
+                    height={1400}
+                    className="w-full h-full object-cover bg-white"
+                  />
+                </div>
               }
-              headline="PDP Update"
+              headline="New Brand Photoshoot"
               subheadline={
                 <p>
-                  We help you update your PDP with new photos that are more realistic and engaging.
+                  We help e-commerce brands create a complete photoshoot from scratch. 
                 </p>
               }
-
-            />
-            <Feature
-              className="p-1"
-              demo={
-                <BeforeAfterSideBySide
-                  beforeImage={{
-                    src: '/img/products/littleBefore.jpg',
-                    alt: 'Before product photo',
-                    width: 2000,
-                    height: 1400,
-                  }}
-                  afterImage={{
-                    src: '/img/products/littleAfter.png',
-                    alt: 'After product photo',
-                    width: 2000,
-                    height: 1400,
-                  }}
-                />
-              }
-              headline="Quick Visuals Need"
-              subheadline={
-                <p>Sometimes, you need a quick visual to get your point across. You take a quick picture of your product and we make it look good.</p>
+              cta={
+                <Link href="img/use-cases/creating-new-brand.pdf" className="bg-gradient-to-r from-orange-500 to-rose-500 bg-clip-text font-semibold text-transparent" target="_blank" rel="noopener noreferrer">
+                  See the use case →
+                </Link>
               }
             />
             <Feature
               className="p-1"
               demo={
-                <BeforeAfterSideBySide
-                  beforeImage={{
-                    src: '/img/products/product3.png',
-                    alt: 'Before product photo',
-                    width: 2000,
-                    height: 1400,
-                  }}
-                  afterImage={{
-                    src: '/img/products/result3.png',
-                    alt: 'After product photo',
-                    width: 2000,
-                    height: 1400,
-                  }}
-                />
+                <div className="aspect-video overflow-hidden">
+                  <Image
+                    src="/img/use-cases/product-page-update.png"
+                    alt="Product photo"
+                    width={2000}
+                    height={1400}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               }
-              headline="Lifestyle Photos without the Hassle"
+              headline="Product Page Update"
               subheadline={
-                <p>We create lifestyle photos that are perfect for your product. No need to hire a model or book a studio.</p>
+                <p>From photos that create doubt to photos that build trust.</p>
+              }
+              cta={
+                <Link href="/img/use-cases/product-page-update.pdf" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-orange-500 to-rose-500 bg-clip-text font-semibold text-transparent">
+                  See the use case →
+                </Link>
               }
             />
             <Feature
               className="p-1"
               demo={
-                <BeforeAfterSideBySide
-                  beforeImage={{
-                    src: '/img/products/pwrrrUpdate.jpg',
-                    alt: 'Before product photo',
-                    width: 2000,
-                    height: 1400,
-                  }}
-                  afterImage={{
-                    src: '/img/products/pwrrr4.png',
-                    alt: 'After product photo',
-                    width: 2000,
-                    height: 1400,
-                  }}
-                />
+                <div className="aspect-video overflow-hidden">
+                  <Image
+                    src="/img/use-cases/model-consistency.png"
+                    alt="Product photo"
+                    width={2000}
+                    height={1400}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               }
-              headline="Conversion Rate Improvement"
+              headline="Fashion Model Consistency"
               subheadline={
-                <p>We turn bad AI photos into good ones. So you re establish trust with your customers. And sell more.</p>
+                <p>We ensure consistent model representation across all photos. Especially important for fashion brands.</p>
+              }
+              cta={
+                <Link href="#" target="_blank" rel="noopener noreferrer" className="text-mist-950 dark:text-white">
+                  Use case coming soon →
+                </Link>
               }
             />
             <Feature
               className="p-1"
               demo={
-                <BeforeAfterSideBySide
-                  beforeImage={{
-                    src: '/img/products/bunnyLamp.jpeg',
-                    alt: 'Before product photo',
-                    width: 2000,
-                    height: 1400,
-                    className: 'bg-white',
-                  }}
-                  afterImage={{
-                    src: '/img/products/bunnyLampFinal.png',
-                    alt: 'After product photo',
-                    width: 2000,
-                    height: 1400,
-                  }}
-                />
+                <div className="aspect-video overflow-hidden">
+                  <Image
+                    src="/img/use-cases/new-product-launch.png"
+                    alt="Product photo"
+                    width={2000}
+                    height={1400}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               }
-              headline="Product Launch"
+              headline="New Product Launch"
               subheadline={
-                <p>
-                  We create product & lifestyle photos to help you launch your product and get more sales.
-                </p>
+                <p>From a simple product photo to a full-blown photoshoot. Studio shots and lifestyle scenes.</p>
               }
-
-            />
-            <Feature
-              className="p-1"
-              demo={
-                <BeforeAfterSideBySide
-                  beforeImage={{
-                    src: '/img/products/bookCover.jpg',
-                    alt: 'Before product photo',
-                    width: 2000,
-                    height: 1400,
-                  }}
-                  afterImage={{
-                    src: '/img/products/bookAds.png',
-                    alt: 'After product photo',
-                    width: 2000,
-                    height: 1400,
-                  }}
-                />
-              }
-              headline="Paid Ads Materials"
-              subheadline={
-                <p>We create photos that are perfect for paid ads.</p>
+              cta={
+                <Link href="#" className="text-mist-950 dark:text-white">
+                  Use case coming soon →
+                </Link>
               }
             />
           </>
@@ -479,10 +426,10 @@ export default function Page() {
             It's not about making beautiful photos
           </span>
         }
-        headline="It's about making visual content that help e-commerce owners like you make more money."
+        headline="It's about making visual content that helps e-commerce brands sell more."
         subheadline={
           <p>
-            We analyze your market, product, and audience to create photos and videos that build trust, and turn attention into revenue.
+            We analyze your market, product, and audience to create photos that build trust, and turn attention into revenue.
           </p>
           
         }
@@ -562,14 +509,14 @@ export default function Page() {
               demo={
                 <BeforeAfterSideBySideExamples
                   beforeImage={{
-                    src: '/img/products/sezaneBefore.png',
+                    src: '/img/products/littleBefore.jpg',
                     alt: 'Before product photo',
                     width: 2000,
                     height: 1400,
                     className: 'bg-white',
                   }}
                   afterImage={{
-                    src: '/img/products/sezaneAfter.png',
+                    src: '/img/products/littleAfter.png',
                     alt: 'After product photo',
                     width: 2000,
                     height: 1400,
@@ -584,13 +531,13 @@ export default function Page() {
               demo={
                 <BeforeAfterSideBySideExamples
                   beforeImage={{
-                    src: '/img/products/hymacsBefore.png',
+                    src: '/img/products/coffee-product-photo.webp',
                     alt: 'Before product photo',
                     width: 2000,
                     height: 1400,
                   }}
                   afterImage={{
-                    src: '/img/products/hymacsAfter.png',
+                    src: '/img/products/coffee3.png',
                     alt: 'After product photo',
                     width: 2000,
                     height: 1400,
@@ -605,13 +552,13 @@ export default function Page() {
               demo={
                 <BeforeAfterSideBySideExamples
                   beforeImage={{
-                    src: '/img/products/gragioBefore.jpg',
+                    src: '/img/products/product3.png',
                     alt: 'Before product photo',
                     width: 2000,
                     height: 1400,
                   }}
                   afterImage={{
-                    src: '/img/products/gragioAfter.png',
+                    src: '/img/products/ai-lifestyle-product-photo.png',
                     alt: 'After product photo',
                     width: 2000,
                     height: 1400,
@@ -626,13 +573,13 @@ export default function Page() {
               demo={
                 <BeforeAfterSideBySideExamples
                   beforeImage={{
-                    src: '/img/products/bunnyLamp.jpeg',
+                    src: '/img/products/model.png',
                     alt: 'Before product photo',
                     width: 2000,
                     height: 1400,
                   }}
                   afterImage={{
-                    src: '/img/products/lampAfter.png',
+                    src: '/img/products/fashionAfter.png',
                     alt: 'After product photo',
                     width: 2000,
                     height: 1400,
@@ -669,13 +616,13 @@ export default function Page() {
               demo={
                 <BeforeAfterSideBySideExamples
                   beforeImage={{
-                    src: '/img/products/beforeArea.png',
+                    src: '/img/products/BURBUJA.png',
                     alt: 'Before product photo',
                     width: 2000,
                     height: 1400,
                   }}
                   afterImage={{
-                    src: '/img/products/afterArea.png',
+                    src: '/img/products/burbuja-room-photo-3.png',
                     alt: 'After product photo',
                     width: 2000,
                     height: 1400,
@@ -695,10 +642,7 @@ export default function Page() {
           question="Isn't AI product photography obvious?"
           answer={
             <>
-              It usually is.
-              <br />
-              That's the problem.
-              <br />
+              It usually is. That's the problem.
               <br />
               Most AI photos are over-polished, over-lit, and instantly feel fake.
               <br />
@@ -714,7 +658,7 @@ export default function Page() {
           question="Will this work on real product pages, not just ads?"
           answer={
             <>
-              Yes — that's exactly what it's built for.
+              Yes, and that's exactly what it's built for.
               <br />
               <br />
               These photos are designed to live on:
@@ -878,7 +822,11 @@ export default function Page() {
       <PricingMultiTier
         id="pricing"
         headline="Pricing to fit your business needs."
-        subheadline={<p>Not happy with the final pictures? We'll refund you. No questions asked.</p>}
+        subheadline={
+          <p className="flex items-center gap-2">
+            <ShieldExclamationIcon className="size-4" /> Unlimited revisions, money back guarantee. 
+          </p>
+        }
         plans={
           <>
             <Plan
@@ -889,7 +837,8 @@ export default function Page() {
               badge="First order offer"
               subheadline={<p>Perfect for quick visuals need, launching or updating a new product.</p>}
               features={[
-                '5 ultra-realistic photos',
+                <span key="photos" className="font-semibold">5 ultra-realistic photos</span>,
+                <span key="photos" className="font-semibold">1 product covered</span>,
                 'Studio + Lifestyle mix',
                 '4K Resolution',
                 'PDP, ads & socials ready',
@@ -914,11 +863,12 @@ export default function Page() {
               name="Essentials Pack"
               price="$97"
               period="one-time payment"
-              subheadline={<p>Perfect to launch or update a collection of products.</p>}
+              subheadline={<p>Perfect to launch or update a collection of different products.</p>}
               badge="Most popular"
               features={[
-                'Up to 5 products covered',
-                '25 ultra-realistic photos (studio + lifestyle)',
+                <span key="products" className="font-semibold">25 ultra-realistic photos</span>,
+                <span key="products" className="font-semibold">Up to 5 products covered</span>,
+                'Studio + Lifestyle mix',
                 '4K Resolution',
                 'PDP, ads & socials ready',
                 'Consistent lighting & mood across SKUs',
@@ -939,8 +889,10 @@ export default function Page() {
               period="one-time payment"
               subheadline={<p>For brands that want a recognizable, premium look everywhere.</p>}
               features={[
-                'Up to 20 products covered',
-                '100 ultra-realistic photos (studio + lifestyle) per product',
+                <span key="products" className="font-semibold">100 ultra-realistic photos</span>,
+                <span key="products" className="font-semibold">Up to 20 products covered</span>,
+                'Studio + Lifestyle mix',
+                '4K Resolution',
                 'Consistent brand identity across all visuals',
                 'Usable across website, ads & socials',
                 'Direct communication with the artist',
@@ -956,7 +908,7 @@ export default function Page() {
           </>
         }
       />
-      {/* Pack examples */}
+      {/* Pack examples 
       <section className="py-16" aria-labelledby="pack-examples-heading">
         <Container className="flex flex-col gap-10">
           
@@ -981,7 +933,7 @@ export default function Page() {
             </div>
           </div>
         </Container>
-      </section>
+      </section> */}
       {/* Call To Action */}
       <CallToActionSimple
         id="call-to-action"

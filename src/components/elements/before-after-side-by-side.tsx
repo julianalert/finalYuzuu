@@ -19,12 +19,14 @@ interface BeforeAfterSideBySideProps {
     className?: string
   }
   className?: string
+  showBadges?: boolean
 }
 
 export function BeforeAfterSideBySide({
   beforeImage,
   afterImage,
   className,
+  showBadges = true,
 }: BeforeAfterSideBySideProps) {
   return (
     <div className={clsx('flex', className)}>
@@ -37,11 +39,12 @@ export function BeforeAfterSideBySide({
           height={beforeImage.height}
           className={clsx('w-full h-full object-cover', beforeImage.className)}
         />
-        {/* Before Label */}
-        <div className="absolute top-4 left-4 flex items-center gap-1.5 bg-rose-50 text-rose-700 dark:bg-rose-950/40 dark:text-rose-300 px-3 py-1.5 rounded-md text-sm font-medium">
-          <XMarkIcon className="size-3.5" />
-          Before
-        </div>
+        {showBadges && (
+          <div className="absolute top-4 left-4 flex items-center gap-1.5 bg-rose-50 text-rose-700 dark:bg-rose-950/40 dark:text-rose-300 px-3 py-1.5 rounded-md text-sm font-medium">
+            <XMarkIcon className="size-3.5" />
+            Before
+          </div>
+        )}
       </div>
       
       {/* White Divider */}
@@ -56,11 +59,12 @@ export function BeforeAfterSideBySide({
           height={afterImage.height}
           className={clsx('w-full h-full object-cover', afterImage.className)}
         />
-        {/* After Label */}
-        <div className="absolute top-4 right-4 flex items-center gap-1.5 bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300 px-3 py-1.5 rounded-md text-sm font-medium">
-          <CheckmarkIcon className="size-3.5" />
-          After
-        </div>
+        {showBadges && (
+          <div className="absolute top-4 right-4 flex items-center gap-1.5 bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300 px-3 py-1.5 rounded-md text-sm font-medium">
+            <CheckmarkIcon className="size-3.5" />
+            After
+          </div>
+        )}
       </div>
     </div>
   )

@@ -15,14 +15,14 @@ export type SliderCard = {
 
 // Static cards – edit title, category; images from /public/img/products
 const SLIDER_CARDS: SliderCard[] = [
-  { id: '1', title: 'PDP Update', category: 'Product', image: '/img/products/noomiAfter.png' },
-  { id: '2', title: 'After Area', category: 'Product', image: '/img/products/afterArea.png' },
-  { id: '3', title: 'Lifestyle', category: 'Product', image: '/img/products/result3.png' },
-  { id: '4', title: 'Quick Visuals', category: 'Product', image: '/img/products/littleAfter.png' },
-  { id: '5', title: 'Conversion', category: 'Product', image: '/img/products/pwrrr4.png' },
-  { id: '6', title: 'Product Launch', category: 'Product', image: '/img/products/bunnyLampFinal.png' },
-  { id: '7', title: 'Paid Ads', category: 'Product', image: '/img/products/bookAds.png' },
-  { id: '8', title: 'Brand', category: 'Product', image: '/img/products/gragioAfter.png' },
+  { id: '1', title: 'PDP Update', category: 'Product', image: '/img/products/ai-lifestyle-product-photo.png' },
+  { id: '2', title: 'After Area', category: 'Product', image: '/img/products/ai-studio-photo.png' },
+  { id: '3', title: 'Lifestyle', category: 'Product', image: '/img/products/ai-product-photo-2.png' },
+  { id: '4', title: 'Quick Visuals', category: 'Product', image: '/img/products/ai-lifestyle-product-photo-2.png' },
+  { id: '5', title: 'Conversion', category: 'Product', image: '/img/products/product-studio-photo-2.png' },
+  { id: '6', title: 'Product Launch', category: 'Product', image: '/img/products/ai-product-photo.png' },
+  { id: '7', title: 'Paid Ads', category: 'Product', image: '/img/products/ai-studio-photo-2.png' },
+  { id: '8', title: 'Brand', category: 'Product', image: '/img/products/product2.png' },
 ]
 
 const CARD_WIDTH = 200
