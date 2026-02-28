@@ -849,15 +849,14 @@ export default function Page() {
                 'Use on PDPs, ads, socials',
               ]}
               cta={
-                <ButtonLink
+                <SoftButtonLink
                   href="https://app.yuzuu.co/signup"
                   size="lg"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="!bg-gradient-to-r !from-orange-500 !to-rose-500 !text-white !shadow-lg hover:!from-orange-600 hover:!to-rose-600"
                 >
                   Get 5 photos for free
-                </ButtonLink>
+                </SoftButtonLink>
               }
             />
             <Plan
@@ -873,9 +872,15 @@ export default function Page() {
                 'Use on PDPs, ads, socials',
               ]}
               cta={
-                <SoftButtonLink href="https://app.yuzuu.co/signup" size="lg" target="_blank" rel="noopener noreferrer">
+                <ButtonLink
+                  href="https://app.yuzuu.co/signup"
+                  size="lg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="!bg-gradient-to-r !from-orange-500 !to-rose-500 !text-white !shadow-lg hover:!from-orange-600 hover:!to-rose-600"
+                >
                   Get 5 photos for free
-                </SoftButtonLink>
+                </ButtonLink>
               }
             />
             <Plan
@@ -890,7 +895,12 @@ export default function Page() {
                 'Use on PDPs, ads, socials',
               ]}
               cta={
-                <SoftButtonLink href="https://app.yuzuu.co/signup" size="lg" target="_blank" rel="noopener noreferrer">
+                <SoftButtonLink
+                  href="https://app.yuzuu.co/signup"
+                  size="lg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Get 5 photos for free
                 </SoftButtonLink>
               }
