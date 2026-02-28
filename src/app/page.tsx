@@ -60,10 +60,12 @@ export default function Page() {
         actions={
           <>
             <ButtonLink 
-              href="#pricing"
+              href="https://app.yuzuu.co/signup"
+              target="_blank"
+              rel="noopener noreferrer"
               className="!bg-gradient-to-r !from-orange-500 !to-rose-500 !text-white !shadow-lg hover:!from-orange-600 hover:!to-rose-600"
             >
-              Your first 5 photos for $7
+              Your first 5 photos for free
             </ButtonLink>
           </>
         }
@@ -75,21 +77,23 @@ export default function Page() {
         headline="AI Product Photos that don't look like AI"
         subheadline={
           <p>
-            DFY Ultra-realistic studio & lifestyle photos for e-commerce, without hiring models or booking a studio. Perfect for product pages, ads, social media, and more.
+            Ultra-realistic studio & lifestyle photos for e-commerce, without hiring models or booking a studio. Perfect for product pages, ads, social media, and more.
           </p>
         }
         cta={
           <div className="flex items-center gap-4">
             <ButtonLink
-              href="#pricing"
+              href="https://app.yuzuu.co/signup"
               size="lg"
+              target="_blank"
+              rel="noopener noreferrer"
               className="!bg-gradient-to-r !from-orange-500 !to-rose-500 !text-white !shadow-lg hover:!from-orange-600 hover:!to-rose-600"
             >
-              Get my first 5 photos for $7
+              Get my first 5 photos for free
             </ButtonLink>
 
             <p className="flex items-center gap-2 text-sm italic text-mist-700 dark:text-mist-400">
-              <ShieldExclamationIcon className="size-4" /> Unlimited revisions, money back guarantee
+               🔥 1,337 photos created this week
             </p>
           </div>
         }
@@ -129,7 +133,7 @@ export default function Page() {
           subheadline={
             <p>
               Visitors don't say "this looks fake", they just leave. <br />
-              <span className="font-semibold">We create studio and lifestyle photos so realistic people don’t question them.</span>
+              <span className="font-semibold">Here, you create studio and lifestyle photos so realistic people don’t question them.</span>
             </p>
           }
       >
@@ -137,9 +141,9 @@ export default function Page() {
           logo={
             <CloudArrowUpIcon className="size-8 text-mist-950 dark:text-white" />
           }
-          headline="1. Send your product info"
-          text="You send us your product photos, your brand guidelines and your target audience."
-          footnote="Takes 2 minutes."
+          headline="1. Upload your product photo"
+          text="PNG, JPG, or WebP format."
+          footnote="Takes 2 seconds."
         />
         <BrandCard
           logo={
@@ -147,7 +151,7 @@ export default function Page() {
           }
           headline="2. We do our magic"
           text="Your product is integrated into ultra-realistic scenes to improve the trustworthiness of your brand."
-          footnote="24-48 hours delivery."
+          footnote="Takes 30 seconds."
         />
         <BrandCard
           logo={
@@ -468,7 +472,7 @@ export default function Page() {
         <Testimonial
           quote={
             <p>
-              We reshaped our whole brand with the help of Yuzuu's service. We're extremely happy with the results. 
+              We reshaped our whole brand with the help of Yuzuu. We're extremely happy with the results. 
             </p>
           }
           img={
@@ -650,7 +654,7 @@ export default function Page() {
               <br />
               Most AI photos are over-polished, over-lit, and instantly feel fake.
               <br />
-              My approach is the opposite: subtle, imperfect, believable.
+              Our algorithm's approach is the opposite: subtle, imperfect, believable.
               <br />
               <br />
               If someone can tell it's AI, the job failed.
@@ -717,9 +721,9 @@ export default function Page() {
               "Wow, this looks cool."
               <br />
               <br />
-              I optimize for:
+              Our tool optimize for:
               <br />
-              "This feels real enough to trust."
+              "This feels real, I trust it."
               <br />
               <br />
               That means:
@@ -742,7 +746,7 @@ export default function Page() {
           question="Will customers know this was made with AI?"
           answer={
             <>
-              They won't ask — and that's the point.
+              They won't ask and that's the point.
               <br />
               <br />
               People don't think:
@@ -764,7 +768,7 @@ export default function Page() {
           question="Why not just do a real photoshoot?"
           answer={
             <>
-              You can — and you should, when it makes sense.
+              You can and you should, when it makes sense.
               <br />
               <br />
               But real shoots are:
@@ -834,78 +838,60 @@ export default function Page() {
         plans={
           <>
             <Plan
-              name="Single Product"
-              price="$7"
-              originalPrice="$47"
+              name="50 credits"
+              price="$27"
               period="one-time payment"
-              badge="First order offer"
-              subheadline={<p>Perfect for quick visuals need, launching or updating a new product.</p>}
+              subheadline={<p>50 Product Photos (Studio & Lifestyle)</p>}
               features={[
-                <span key="photos" className="font-semibold">5 ultra-realistic photos</span>,
-                <span key="photos" className="font-semibold">1 product covered</span>,
-                'Studio + Lifestyle mix',
-                '4K Resolution',
-                'PDP, ads & socials ready',
-                'Visual direction based on your ICPs',
-                'Consistent brand identity across all visuals',
-                '48 hours delivery',
-                'Unlimited revisions',
+                '4K quality',
+                'Unlimited products',
+                'Unlimited photoshoots',
+                'Use on PDPs, ads, socials',
               ]}
               cta={
-                <ButtonLink 
-                  href="https://buy.stripe.com/14AbJ2bZI1dugRX4SveME04" 
-                  size="lg" 
-                  target="_blank" 
+                <ButtonLink
+                  href="https://app.yuzuu.co/signup"
+                  size="lg"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="!bg-gradient-to-r !from-orange-500 !to-rose-500 !text-white !shadow-lg hover:!from-orange-600 hover:!to-rose-600"
                 >
-                  Improve your PDP for $7
+                  Get 5 photos for free
                 </ButtonLink>
               }
             />
             <Plan
-              name="Essentials Pack"
-              price="$97"
+              name="100 credits"
+              price="$47"
               period="one-time payment"
-              subheadline={<p>Perfect to launch or update a collection of different products.</p>}
+              subheadline={<p>100 Product Photos (Studio & Lifestyle)</p>}
               badge="Most popular"
               features={[
-                <span key="products" className="font-semibold">25 ultra-realistic photos</span>,
-                <span key="products" className="font-semibold">Up to 5 products covered</span>,
-                'Studio + Lifestyle mix',
-                '4K Resolution',
-                'PDP, ads & socials ready',
-                'Consistent lighting & mood across SKUs',
-                'Visual direction based on your ICPs',
-                'Consistent brand identity across all visuals',
-                '72 hours delivery',
-                'Unlimited revisions',
+                '4K quality',
+                'Unlimited products',
+                'Unlimited photoshoots',
+                'Use on PDPs, ads, socials',
               ]}
               cta={
-                <SoftButtonLink href="https://buy.stripe.com/3cIbJ27Js2hygRXacPeME09" size="lg" target="_blank" rel="noopener noreferrer">
-                  Get started for $97
+                <SoftButtonLink href="https://app.yuzuu.co/signup" size="lg" target="_blank" rel="noopener noreferrer">
+                  Get 5 photos for free
                 </SoftButtonLink>
               }
             />
             <Plan
-              name="Branding Pack"
-              price="$297"
+              name="200 credits"
+              price="$97"
               period="one-time payment"
-              subheadline={<p>For brands that want a recognizable, premium look everywhere.</p>}
+              subheadline={<p>200 Product Photos (Studio & Lifestyle)</p>}
               features={[
-                <span key="products" className="font-semibold">100 ultra-realistic photos</span>,
-                <span key="products" className="font-semibold">Up to 20 products covered</span>,
-                'Studio + Lifestyle mix',
-                '4K Resolution',
-                'Consistent brand identity across all visuals',
-                'Usable across website, ads & socials',
-                'Direct communication with the artist',
-                '5-days delivery',
-                'Unlimited revisions',
+                '4K quality',
+                'Unlimited products',
+                'Unlimited photoshoots',
+                'Use on PDPs, ads, socials',
               ]}
               cta={
-                <SoftButtonLink href="https://buy.stripe.com/4gM6oI8NwaO48lr70DeME08" size="lg" target="_blank" rel="noopener noreferrer">
-                  Get started - $297
+                <SoftButtonLink href="https://app.yuzuu.co/signup" size="lg" target="_blank" rel="noopener noreferrer">
+                  Get 5 photos for free
                 </SoftButtonLink>
               }
             />
@@ -939,7 +925,7 @@ export default function Page() {
         </Container>
       </section> */}
       {/* Call To Action */}
-      <CallToActionSimple
+      {/*<CallToActionSimple
         id="call-to-action"
         headline="Do you have a custom project in mind?"
         subheadline={
@@ -956,7 +942,7 @@ export default function Page() {
             
           </div>
         }
-      />
+      />*/}
     </>
   )
 }

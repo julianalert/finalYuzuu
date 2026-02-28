@@ -38,7 +38,7 @@ export function Plan({
           {badge && (
             <div className={clsx(
               'order-last inline-flex rounded-full px-2 py-0.5 text-xs/6 font-semibold',
-              badge === 'First order offer' 
+              (badge === 'First order offer' || badge === 'Most popular')
                 ? 'bg-orange-500/10 text-orange-500 dark:bg-orange-500/20 dark:text-orange-400'
                 : 'bg-mist-950/10 text-mist-950 dark:bg-white/10 dark:text-white'
             )}>

@@ -9,7 +9,7 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'AI Product Photos that do not look like AI - Yuzuu',
   description:
-    'DFY Ultra-realistic studio & lifestyle photos for e-commerce, without hiring models or booking a studio. Perfect for PDPs, ads, and social media. 24-48h delivery.',
+    'Ultra-realistic studio & lifestyle photos for e-commerce, without hiring models or booking a studio. Perfect for PDPs, ads, and social media.',
   keywords: [
     'AI product photography',
     'e-commerce photos',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: 'Yuzuu',
     title: 'AI Product Photos that do not look like AI - Yuzuu',
     description:
-      'DFY Ultra-realistic studio & lifestyle photos for e-commerce, without hiring models or booking a studio. 24-48h delivery.',
+      'Ultra-realistic studio & lifestyle photos for e-commerce, without hiring models or booking a studio.',
     images: [
       {
         url: 'https://www.yuzuu.co/img/thumbnail.png',
@@ -93,9 +93,9 @@ export default function RootLayout({
           <footer id="footer" className="pt-16">
             <div className="bg-mist-950/2.5 py-16 text-mist-950 dark:bg-white/5 dark:text-white">
               <Container className="flex items-center justify-between gap-10 text-sm/7">
-                <div className="text-mist-600 dark:text-mist-500">© 2025 Yuzuu, Inc | Service delivered with 🧡 from 🇫🇷 </div>
+                <div className="text-mist-600 dark:text-mist-500">© 2025 Yuzuu, Inc | Built with 🧡 from 🇫🇷 </div>
                 <div className="flex items-center gap-4 sm:gap-10">
-                  <SocialLink href="https://x.com/julianyuzuu" name="X">
+                  <SocialLink href="https://x.com/notanothermrktr" name="X">
                     <XIcon />
                   </SocialLink>
                 </div>
