@@ -18,8 +18,8 @@ const SLIDER_CARDS: SliderCard[] = [
   { id: '1', title: 'AI Product Photo', category: 'Product', image: '/img/examples/ai-product-photography.png' },
   { id: '2', title: 'AI Product Photo', category: 'Product', image: '/img/examples/ai-product-photography-3.png' },
   { id: '3', title: 'AI Product Photo', category: 'Product', image: '/img/examples/ai-product-photography-2.png' },
-  { id: '4', title: 'AI Product Photo', category: 'Product', image: '/img/examples/ai-product-photography-4.png' },
-  { id: '5', title: 'AI Product Photo', category: 'Product', image: '/img/examples/ai-product-photography-5.png' },
+  { id: '4', title: 'AI Product Photo', category: 'Product', image: '/img/examples/ai-product-photography-5.png' },
+  { id: '5', title: 'AI Product Photo', category: 'Product', image: '/img/examples/ai-product-photography-4.png' },
   { id: '6', title: 'AI Product Photo', category: 'Product', image: '/img/examples/ai-product-photography-6.png' },
   { id: '7', title: 'AI Product Photo', category: 'Product', image: '/img/examples/ai-product-photography-7.png' },
 ]
