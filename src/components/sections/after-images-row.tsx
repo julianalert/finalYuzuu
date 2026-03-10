@@ -13,16 +13,15 @@ export type SliderCard = {
   href?: string
 }
 
-// Static cards – edit title, category; images from /public/img/products
+// Hero: images from /public/img/examples (ai-product-photography set)
 const SLIDER_CARDS: SliderCard[] = [
-  { id: '1', title: 'PDP Update', category: 'Product', image: '/img/products/ai-lifestyle-product-photo.png' },
-  { id: '2', title: 'After Area', category: 'Product', image: '/img/products/ai-studio-photo.png' },
-  { id: '3', title: 'Lifestyle', category: 'Product', image: '/img/products/ai-product-photo-2.png' },
-  { id: '4', title: 'Quick Visuals', category: 'Product', image: '/img/products/ai-lifestyle-product-photo-2.png' },
-  { id: '5', title: 'Conversion', category: 'Product', image: '/img/products/product-studio-photo-2.png' },
-  { id: '6', title: 'Product Launch', category: 'Product', image: '/img/products/ai-product-photo.png' },
-  { id: '7', title: 'Paid Ads', category: 'Product', image: '/img/products/ai-studio-photo-2.png' },
-  { id: '8', title: 'Brand', category: 'Product', image: '/img/products/product2.png' },
+  { id: '1', title: 'AI Product Photo', category: 'Product', image: '/img/examples/ai-product-photography.png' },
+  { id: '2', title: 'AI Product Photo', category: 'Product', image: '/img/examples/ai-product-photography-3.png' },
+  { id: '3', title: 'AI Product Photo', category: 'Product', image: '/img/examples/ai-product-photography-2.png' },
+  { id: '4', title: 'AI Product Photo', category: 'Product', image: '/img/examples/ai-product-photography-4.png' },
+  { id: '5', title: 'AI Product Photo', category: 'Product', image: '/img/examples/ai-product-photography-5.png' },
+  { id: '6', title: 'AI Product Photo', category: 'Product', image: '/img/examples/ai-product-photography-6.png' },
+  { id: '7', title: 'AI Product Photo', category: 'Product', image: '/img/examples/ai-product-photography-7.png' },
 ]
 
 const CARD_WIDTH = 200
