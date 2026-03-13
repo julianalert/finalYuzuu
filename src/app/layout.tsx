@@ -93,9 +93,9 @@ export default function RootLayout({
           <footer id="footer" className="pt-16">
             <div className="bg-mist-950/2.5 py-16 text-mist-950 dark:bg-white/5 dark:text-white">
               <Container className="flex items-center justify-between gap-10 text-sm/7">
-                <div className="text-mist-600 dark:text-mist-500">© 2025 Yuzuu, Inc | Built with 🧡 from 🇫🇷 </div>
+                <div className="text-mist-600 dark:text-mist-500">© 2026 Yuzuu, Inc | Built with 🧡 from 🇫🇷 </div>
                 <div className="flex items-center gap-4 sm:gap-10">
-                  <SocialLink href="https://x.com/notanothermrktr" name="X">
+                  <SocialLink href="https://x.com/juliendvr" name="X">
                     <XIcon />
                   </SocialLink>
                 </div>

@@ -65,7 +65,7 @@ export default function Page() {
               rel="noopener noreferrer"
               className="!bg-gradient-to-r !from-orange-500 !to-rose-500 !text-white !shadow-lg hover:!from-orange-600 hover:!to-rose-600"
             >
-              Your first 5 photos for free
+              Create my photoshoot for free
             </ButtonLink>
           </>
         }
