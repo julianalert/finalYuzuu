@@ -120,7 +120,7 @@ export default function Page() {
         <BrandCard
           headline="3. Your photoshoot is ready"
           text="You finally can use pictures that don't make you look like a fraud."
-          footnote="+12.68% conversion rate improvement, based on 24 customers' use cases."
+          footnote="+12.68% conversion rate improvement, based on 50+ customers' use cases."
           image={
             <Image
               src="/img/photoshoots/output.png"
@@ -309,7 +309,7 @@ export default function Page() {
           
         }
       >
-        <Stat stat="+12.68%" text="Avg Converion Rate Increase." />
+        <Stat stat="+12.68%" text="Avg Conversion Rate Increase." />
         <Stat stat="+92.45%" text="Retention Rate from our customers" />
       </StatsWithGraph>
       {/* More Examples - Duplicated Cards */}
@@ -582,6 +582,60 @@ export default function Page() {
           }
           name="Ian MacEachern"
           byline="Founder at Hymacs"
+        />
+        <Testimonial
+          quote={
+            <p>
+              We wasted $5k on fancy photo shoots that ended up looking too staged. Then we tried Yuzuu, and 2 weeks later, conversions soared by 14%.
+            </p>
+          }
+          img={
+            <Image
+              src="/img/avatars/jack.jpg"
+              alt="talo"
+              className="not-dark:bg-white/75 dark:bg-black/75"
+              width={160}
+              height={160}
+            />
+          }
+          name="Jack Carney"
+          byline="Talo founder & CEO"
+        />
+        <Testimonial
+          quote={
+            <p>
+              I was skeptical at first, I've seen too many AI tools produce garbage. But the photos Yuzuu delivered looked better than what our agency charged us $3k for.
+            </p>
+          }
+          img={
+            <Image
+              src="/img/avatars/11-size-160.webp"
+              alt=""
+              className="not-dark:bg-white/75 dark:bg-black/75"
+              width={160}
+              height={160}
+            />
+          }
+          name="Anthony Walker"
+          byline="Founder at Blume Skincare"
+        />
+        <Testimonial
+          quote={
+            <p>
+              We launched a new product line with zero studio budget. Yuzuu handled all the visuals. Our ads CTR jumped 22% compared to our previous launch.
+            </p>
+          }
+          img={
+            <Image
+              src="/img/avatars/8-h-1000-w-800.webp"
+              alt=""
+              className="not-dark:bg-white/75 dark:bg-black/75"
+              width={160}
+              height={160}
+            />
+          }
+          name="Jane McQuillan"
+          byline="Co-founder at Kula Gear"
         />
       </TestimonialThreeColumnGrid>
       {/* Pricing */}
