@@ -7,12 +7,14 @@ export function CallToActionWithPhoto({
   headline,
   subheadline,
   cta,
+  image = { src: '/img/photoshoots/atelier du chocolat2.png', alt: 'Atelier du Chocolat product photoshoot' },
   className,
   ...props
 }: {
   headline: ReactNode
   subheadline?: ReactNode
   cta?: ReactNode
+  image?: { src: string; alt: string }
 } & ComponentProps<'section'>) {
   return (
     <section className={clsx('py-16', className)} {...props}>
@@ -34,8 +36,8 @@ export function CallToActionWithPhoto({
             <div className="relative lg:w-1/2">
               <div className="aspect-[4/3] w-full lg:aspect-auto lg:h-full lg:min-h-[420px]">
                 <Image
-                  src="/img/photoshoots/atelier du chocolat2.png"
-                  alt="Atelier du Chocolat product photoshoot"
+                  src={image.src}
+                  alt={image.alt}
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"

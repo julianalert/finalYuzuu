@@ -3,71 +3,25 @@ import Image from 'next/image'
 import { Container } from '@/components/elements/container'
 import { AnnouncementBadge } from '@/components/elements/announcement-badge'
 import { ButtonLink, PlainButtonLink, SoftButtonLink } from '@/components/elements/button'
-import { Link } from '@/components/elements/link'
 import { BeforeAfterSlider } from '@/components/elements/before-after-slider'
 import { BeforeAfterSideBySideExamples } from '@/components/elements/before-after-side-by-side-examples'
 import { ArrowNarrowRightIcon } from '@/components/icons/arrow-narrow-right-icon'
 import { ChevronIcon } from '@/components/icons/chevron-icon'
 import { ShieldExclamationIcon } from '@/components/icons/shield-exclamation-icon'
 import { CallToActionSimple } from '@/components/sections/call-to-action-simple'
-import { CallToActionWithPhoto } from '@/components/sections/call-to-action-with-photo'
+import { SiteCTA } from '@/components/sections/site-cta'
+import { SiteNavbar } from '@/components/sections/site-navbar'
 import { FAQsTwoColumnAccordion, Faq } from '@/components/sections/faqs-two-column-accordion'
-import { Feature, FeaturesTwoColumnWithDemos } from '@/components/sections/features-two-column-with-demos'
 import { HeroLeftAlignedWithDemo } from '@/components/sections/hero-left-aligned-with-demo'
 import { Plan, PricingMultiTier } from '@/components/sections/pricing-multi-tier'
 import { Stat, StatsWithGraph } from '@/components/sections/stats-with-graph'
 import { Testimonial, TestimonialThreeColumnGrid } from '@/components/sections/testimonials-three-column-grid'
-import {
-  NavbarLink,
-  NavbarLogo,
-  NavbarWithLinksActionsAndCenteredLogo,
-} from '@/components/sections/navbar-with-links-actions-and-centered-logo'
 import { BrandCard, BrandsCardsMultiColumn } from '@/components/sections/brands-cards-multi-column'
 import { AfterImagesRowSection } from '@/components/sections/after-images-row'
 export default function Page() {
   return (
     <>
-      <NavbarWithLinksActionsAndCenteredLogo
-        id="navbar"
-        links={
-          <>
-            <NavbarLink href="#brands">How it works?</NavbarLink>
-            <NavbarLink href="#top-features">Use Cases</NavbarLink>
-            <NavbarLink href="#testimonial">Testimonials</NavbarLink>
-            <NavbarLink href="#pricing">Pricing</NavbarLink>
-          </>
-        }
-        logo={
-          <NavbarLogo href="/">
-            <Image
-              src="/img/logos/yuzuu.svg"
-              alt="Yuzuu"
-              className="dark:hidden"
-              width={85}
-              height={28}
-            />
-            <Image
-              src="/img/logos/yuzuu-white.svg"
-              alt="Yuzuu"
-              className="not-dark:hidden"
-              width={85}
-              height={28}
-            />
-          </NavbarLogo>
-        }
-        actions={
-          <>
-            <ButtonLink 
-              href="https://app.yuzuu.co/signup"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="!bg-gradient-to-r !from-orange-500 !to-rose-500 !text-white !shadow-lg hover:!from-orange-600 hover:!to-rose-600"
-            >
-              Get my first photoshoot for free
-            </ButtonLink>
-          </>
-        }
-      />
+      <SiteNavbar />
       {/* Hero */}
       <HeroLeftAlignedWithDemo
         id="hero"
@@ -87,7 +41,7 @@ export default function Page() {
               rel="noopener noreferrer"
               className="!bg-gradient-to-r !from-orange-500 !to-rose-500 !text-white !shadow-lg hover:!from-orange-600 hover:!to-rose-600"
             >
-              Get my first photoshoot for free
+              Get 5 photos for free
             </ButtonLink>
 
             <p className="flex items-center gap-2 text-sm italic text-mist-700 dark:text-mist-400">
@@ -136,13 +90,13 @@ export default function Page() {
           }
       >
         <BrandCard
-          headline="1. Upload your product photo"
-          text="PNG, JPG, or WebP format."
+          headline="1. Upload your product photos"
+          text="PNG, JPG, or WebP format. Up to 10 photos at a time."
           footnote="Takes 2 seconds."
           image={
             <Image
               src="/img/photoshoots/upload.png"
-              alt="Upload your product photo"
+              alt="Upload your product photos"
               width={800}
               height={500}
               className="w-full object-cover"
@@ -150,7 +104,7 @@ export default function Page() {
           }
         />
         <BrandCard
-          headline="2. We do our magic"
+          headline="2. Our AI Creative Director does the magic"
           text="Your product is integrated into ultra-realistic scenes to improve the trustworthiness of your brand."
           footnote="Takes 30 seconds."
           image={
@@ -164,7 +118,7 @@ export default function Page() {
           }
         />
         <BrandCard
-          headline="3. You get images that don't scream AI"
+          headline="3. Your photoshoot is ready"
           text="You finally can use pictures that don't make you look like a fraud."
           footnote="+12.68% conversion rate improvement, based on 24 customers' use cases."
           image={
@@ -178,109 +132,6 @@ export default function Page() {
           }
         />
       </BrandsCardsMultiColumn>
-      {/* Top Features - Duplicated Cards */}
-      <FeaturesTwoColumnWithDemos
-        id="top-features"
-        className="!pt-0"
-        features={
-          <>
-            <Feature
-              className="p-1"
-              demo={
-                <div className="aspect-video overflow-hidden">
-                  <Image
-                    src="/img/use-cases/creating-new-brand.png"
-                    alt="Creating a new brand"
-                    width={2000}
-                    height={1400}
-                    className="w-full h-full object-cover bg-white"
-                  />
-                </div>
-              }
-              headline="New Brand Photoshoot"
-              subheadline={
-                <p>
-                  We help e-commerce brands create a complete photoshoot from scratch. 
-                </p>
-              }
-              cta={
-                <Link href="img/use-cases/creating-new-brand.pdf" className="bg-gradient-to-r from-orange-500 to-rose-500 bg-clip-text font-semibold text-transparent" target="_blank" rel="noopener noreferrer">
-                  See the use case →
-                </Link>
-              }
-            />
-            <Feature
-              className="p-1"
-              demo={
-                <div className="aspect-video overflow-hidden">
-                  <Image
-                    src="/img/use-cases/product-page-update.png"
-                    alt="Product photo"
-                    width={2000}
-                    height={1400}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              }
-              headline="Product Page Update"
-              subheadline={
-                <p>From photos that create doubt to photos that build trust.</p>
-              }
-              cta={
-                <Link href="/img/use-cases/product-page-update.pdf" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-orange-500 to-rose-500 bg-clip-text font-semibold text-transparent">
-                  See the use case →
-                </Link>
-              }
-            />
-            <Feature
-              className="p-1"
-              demo={
-                <div className="aspect-video overflow-hidden">
-                  <Image
-                    src="/img/use-cases/model-consistency.png"
-                    alt="Product photo"
-                    width={2000}
-                    height={1400}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              }
-              headline="Fashion Model Consistency"
-              subheadline={
-                <p>We ensure consistent model representation across all photos. Especially important for fashion brands.</p>
-              }
-              cta={
-                <Link href="#" target="_blank" rel="noopener noreferrer" className="text-mist-950 dark:text-white">
-                  Use case coming soon →
-                </Link>
-              }
-            />
-            <Feature
-              className="p-1"
-              demo={
-                <div className="aspect-video overflow-hidden">
-                  <Image
-                    src="/img/use-cases/new-product-launch.png"
-                    alt="Product photo"
-                    width={2000}
-                    height={1400}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              }
-              headline="New Product Launch"
-              subheadline={
-                <p>From a simple product photo to a full-blown photoshoot. Studio shots and lifestyle scenes.</p>
-              }
-              cta={
-                <Link href="#" className="text-mist-950 dark:text-white">
-                  Use case coming soon →
-                </Link>
-              }
-            />
-          </>
-        }
-      />
       {/* Features */}
       {/* <FeaturesTwoColumnWithDemos
         id="features"
@@ -450,10 +301,10 @@ export default function Page() {
             It's not about making beautiful photos
           </span>
         }
-        headline="It's about making visual content that helps e-commerce brands like yours sell more."
+        headline="It's about making professional photos that helps you sell more."
         subheadline={
           <p>
-            Our model analyzes your market, product, and audience to create photos that build trust, and turn attention into revenue.
+            Our AI Creative Director analyzes your market, product, and audience to create photos that build trust, and turn attention into revenue.
           </p>
           
         }
@@ -461,67 +312,6 @@ export default function Page() {
         <Stat stat="+12.68%" text="Avg Converion Rate Increase." />
         <Stat stat="+92.45%" text="Retention Rate from our customers" />
       </StatsWithGraph>
-      {/* Testimonial */}
-      <TestimonialThreeColumnGrid
-        id="testimonial"
-        headline="What our customers are saying"
-        
-      >
-        <Testimonial
-          quote={
-            <p>
-              The pictures look amazing! Used them for my ads. They were perfect.
-            </p>
-          }
-          img={
-            <Image
-              src="/img/avatars/amir.jpg"
-              alt=""
-              className="not-dark:bg-white/75 dark:bg-black/75"
-              width={160}
-              height={160}
-            />
-          }
-          name="Amir J Blake"
-          byline="Author of Make Britain Poor Again"
-        />
-        <Testimonial
-          quote={
-            <p>
-              We reshaped our whole brand with the help of Yuzuu. We're extremely happy with the results. 
-            </p>
-          }
-          img={
-            <Image
-              src="/img/avatars/sarah.png"
-              alt=""
-              className="not-dark:bg-white/75 dark:bg-black/75"
-              width={160}
-              height={160}
-            />
-          }
-          name="Sarah Marshall"
-          byline="Founder at Noomi"
-        />
-        <Testimonial
-          quote={
-            <p>
-              All the pictures were great! We launched a paid ads campaign on TikTok and got one of our best performance. Can't recommend enough!
-            </p>
-          }
-          img={
-            <Image
-              src="/img/avatars/ian.png"
-              alt=""
-              className="not-dark:bg-white/75 dark:bg-black/75"
-              width={160}
-              height={160}
-            />
-          }
-          name="Ian MacEachern"
-          byline="Founder at Hymacs"
-        />
-      </TestimonialThreeColumnGrid>
       {/* More Examples - Duplicated Cards */}
       {/* <FeaturesTwoColumnWithDemos
         id="more-examples"
@@ -659,29 +449,141 @@ export default function Page() {
           </>
         }
       /> */}
-      {/* Photoshoot Gallery */}
-      <section className="py-16">
-        <Container>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {[
-              { src: '/img/photoshoots/atelier du chocolat.png', alt: 'Atelier du Chocolat photoshoot' },
-              { src: '/img/photoshoots/atelier du chocolat2.png', alt: 'Atelier du Chocolat photoshoot 2' },
-              { src: '/img/photoshoots/fabrica.png', alt: 'Fabrica photoshoot' },
-              { src: '/img/photoshoots/TALO.png', alt: 'TALO photoshoot' },
-            ].map((photo) => (
-              <div key={photo.src} className="relative overflow-hidden rounded-xl aspect-square">
-                <Image
-                  src={photo.src}
-                  alt={photo.alt}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 640px) 100vw, 50vw"
-                />
-              </div>
-            ))}
+      {/* Industry Cards */}
+      <section id="industries" className="py-16">
+        <Container className="flex flex-col gap-10">
+          <div className="flex flex-col gap-2">
+            <p className="bg-gradient-to-r from-orange-500 to-rose-500 bg-clip-text font-semibold text-transparent text-sm">
+              See the transformation
+            </p>
+            <h2 className="font-display text-[2rem]/10 tracking-tight text-pretty text-mist-950 sm:text-5xl/14 dark:text-white">
+            Works for any kind of product
+            </h2>
+            <p className="text-base/7 text-mist-700 dark:text-mist-400 max-w-2xl">
+              From a plain product shot to a complete ai product photoshoot, tailored to your brand. All powered by AI and automated. 
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+        <BrandCard
+          headline="Sport & Outdoor"
+          text="High-energy visuals that put your gear in the field — trails, courts, and tracks. No studio. No compromise."
+          footnote=""
+          image={
+            <Image
+              src="/img/photoshoots/ai-product-photo-sport.png"
+              alt="AI sport product photo"
+              width={800}
+              height={600}
+              className="w-full h-auto object-contain"
+            />
+          }
+        />
+        <BrandCard
+          headline="Kids & Baby"
+          text="Warm, playful scenes that build trust with parents. Your products look exactly as safe and fun as they are."
+          footnote=""
+          image={
+            <Image
+              src="/img/photoshoots/ai-product-photo-kids.png"
+              alt="AI kids product photo"
+              width={800}
+              height={600}
+              className="w-full h-auto object-contain"
+            />
+          }
+        />
+        <BrandCard
+          headline="Food & Beverage"
+          text="Mouth-watering lifestyle shots that make people hungry just scrolling. No food stylist required."
+          footnote=""
+          image={
+            <Image
+              src="/img/photoshoots/ai-product-photo-food.png"
+              alt="AI food product photo"
+              width={800}
+              height={600}
+              className="w-full h-auto object-contain"
+            />
+          }
+        />
+        <BrandCard
+          headline="Home & Living"
+          text="Cozy, aspirational interiors that make your home products feel like they already belong in someone's space."
+          footnote=""
+          image={
+            <Image
+              src="/img/photoshoots/ai-product-photo-home.png"
+              alt="AI home product photo"
+              width={800}
+              height={600}
+              className="w-full h-auto object-contain"
+            />
+          }
+        />
           </div>
         </Container>
       </section>
+      {/* Testimonial */}
+      <TestimonialThreeColumnGrid
+        id="testimonial"
+        headline="What our customers are saying"
+        
+      >
+        <Testimonial
+          quote={
+            <p>
+              The pictures look amazing! Used them for my ads. They were perfect.
+            </p>
+          }
+          img={
+            <Image
+              src="/img/avatars/amir.jpg"
+              alt=""
+              className="not-dark:bg-white/75 dark:bg-black/75"
+              width={160}
+              height={160}
+            />
+          }
+          name="Amir J Blake"
+          byline="Author of Make Britain Poor Again"
+        />
+        <Testimonial
+          quote={
+            <p>
+              We reshaped our whole brand with the help of Yuzuu. We're extremely happy with the results. 
+            </p>
+          }
+          img={
+            <Image
+              src="/img/avatars/sarah.png"
+              alt=""
+              className="not-dark:bg-white/75 dark:bg-black/75"
+              width={160}
+              height={160}
+            />
+          }
+          name="Sarah Marshall"
+          byline="Founder at Noomi"
+        />
+        <Testimonial
+          quote={
+            <p>
+              All the pictures were great! We launched a paid ads campaign on TikTok and got one of our best performance. Can't recommend enough!
+            </p>
+          }
+          img={
+            <Image
+              src="/img/avatars/ian.png"
+              alt=""
+              className="not-dark:bg-white/75 dark:bg-black/75"
+              width={160}
+              height={160}
+            />
+          }
+          name="Ian MacEachern"
+          byline="Founder at Hymacs"
+        />
+      </TestimonialThreeColumnGrid>
       {/* Pricing */}
       <PricingMultiTier
         id="pricing"
@@ -712,7 +614,7 @@ export default function Page() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Get my first photoshoot for free
+                  Get 5 photos for free
                 </SoftButtonLink>
               }
             />
@@ -737,7 +639,7 @@ export default function Page() {
                   rel="noopener noreferrer"
                   className="!bg-gradient-to-r !from-orange-500 !to-rose-500 !text-white !shadow-lg hover:!from-orange-600 hover:!to-rose-600"
                 >
-                  Get my first photoshoot for free
+                  Get 5 photos for free
                 </ButtonLink>
               }
             />
@@ -760,7 +662,7 @@ export default function Page() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Get my first photoshoot for free
+                  Get 5 photos for free
                 </SoftButtonLink>
               }
             />
@@ -950,25 +852,7 @@ export default function Page() {
         />
       </FAQsTwoColumnAccordion>
       {/* CTA with Photo */}
-      <CallToActionWithPhoto
-        id="cta-photo"
-        headline="Your first photoshoot for free"
-        subheadline="Give it a try now, the results might surprise you. It won't cost you anything."
-        cta={
-          <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:gap-3">
-            <ButtonLink
-              href="https://app.yuzuu.co/signup"
-              size="lg"
-              target="_blank"
-              rel="noopener noreferrer"
-              color="light"
-            >
-              Let's get started →
-            </ButtonLink>
-            <p className="text-sm italic text-mist-500">💳 No credit card needed</p>
-          </div>
-        }
-      />
+      <SiteCTA />
       {/* Pack examples 
       <section className="py-16" aria-labelledby="pack-examples-heading">
         <Container className="flex flex-col gap-10">
