@@ -10,6 +10,7 @@ import { ArrowNarrowRightIcon } from '@/components/icons/arrow-narrow-right-icon
 import { ChevronIcon } from '@/components/icons/chevron-icon'
 import { ShieldExclamationIcon } from '@/components/icons/shield-exclamation-icon'
 import { CallToActionSimple } from '@/components/sections/call-to-action-simple'
+import { CallToActionWithPhoto } from '@/components/sections/call-to-action-with-photo'
 import { FAQsTwoColumnAccordion, Faq } from '@/components/sections/faqs-two-column-accordion'
 import { Feature, FeaturesTwoColumnWithDemos } from '@/components/sections/features-two-column-with-demos'
 import { HeroLeftAlignedWithDemo } from '@/components/sections/hero-left-aligned-with-demo'
@@ -681,6 +682,91 @@ export default function Page() {
           </div>
         </Container>
       </section>
+      {/* Pricing */}
+      <PricingMultiTier
+        id="pricing"
+        headline="It's time to say goodbye to $10k photoshoots"
+        subheadline={
+          <p>
+            Get studio &amp; lifestyle photos for your e-commerce brand, without hiring models or booking a studio.
+          </p>
+        }
+        plans={
+          <>
+            <Plan
+              name="50 credits"
+              price="$27"
+              period="one-time payment"
+              subheadline={<p>50 Product Photos (Studio & Lifestyle)</p>}
+              features={[
+                '4K quality',
+                'Unlimited products',
+                'Unlimited photoshoots',
+                'Unlimited brands',
+                'Use anywhere: PDPs, ads, socials, etc...',
+              ]}
+              cta={
+                <SoftButtonLink
+                  href="https://app.yuzuu.co/signup"
+                  size="lg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Get my first photoshoot for free
+                </SoftButtonLink>
+              }
+            />
+            <Plan
+              name="100 credits"
+              price="$47"
+              period="one-time payment"
+              subheadline={<p>100 Product Photos (Studio & Lifestyle)</p>}
+              badge="Most popular"
+              features={[
+                '4K quality',
+                'Unlimited products',
+                'Unlimited photoshoots',
+                'Unlimited brands',
+                'Use anywhere: PDPs, ads, socials, etc...',
+              ]}
+              cta={
+                <ButtonLink
+                  href="https://app.yuzuu.co/signup"
+                  size="lg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="!bg-gradient-to-r !from-orange-500 !to-rose-500 !text-white !shadow-lg hover:!from-orange-600 hover:!to-rose-600"
+                >
+                  Get my first photoshoot for free
+                </ButtonLink>
+              }
+            />
+            <Plan
+              name="200 credits"
+              price="$97"
+              period="one-time payment"
+              subheadline={<p>200 Product Photos (Studio & Lifestyle)</p>}
+              features={[
+                '4K quality',
+                'Unlimited products',
+                'Unlimited photoshoots',
+                'Unlimited brands',
+                'Use anywhere: PDPs, ads, socials, etc...',
+              ]}
+              cta={
+                <SoftButtonLink
+                  href="https://app.yuzuu.co/signup"
+                  size="lg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Get my first photoshoot for free
+                </SoftButtonLink>
+              }
+            />
+          </>
+        }
+      />
       {/* FAQs */}
       <FAQsTwoColumnAccordion id="faqs" headline="Questions & Answers">
         <Faq
@@ -863,89 +949,24 @@ export default function Page() {
           }
         />
       </FAQsTwoColumnAccordion>
-      {/* Pricing */}
-      <PricingMultiTier
-        id="pricing"
-        headline="It's time to say goodbye to $10k photoshoots"
-        subheadline={
-          <p>
-            Get studio &amp; lifestyle photos for your e-commerce brand, without hiring models or booking a studio.
-          </p>
-        }
-        plans={
-          <>
-            <Plan
-              name="50 credits"
-              price="$27"
-              period="one-time payment"
-              subheadline={<p>50 Product Photos (Studio & Lifestyle)</p>}
-              features={[
-                '4K quality',
-                'Unlimited products',
-                'Unlimited photoshoots',
-                'Unlimited brands',
-                'Use anywhere: PDPs, ads, socials, etc...',
-              ]}
-              cta={
-                <SoftButtonLink
-                  href="https://app.yuzuu.co/signup"
-                  size="lg"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Get my first photoshoot for free
-                </SoftButtonLink>
-              }
-            />
-            <Plan
-              name="100 credits"
-              price="$47"
-              period="one-time payment"
-              subheadline={<p>100 Product Photos (Studio & Lifestyle)</p>}
-              badge="Most popular"
-              features={[
-                '4K quality',
-                'Unlimited products',
-                'Unlimited photoshoots',
-                'Unlimited brands',
-                'Use anywhere: PDPs, ads, socials, etc...',
-              ]}
-              cta={
-                <ButtonLink
-                  href="https://app.yuzuu.co/signup"
-                  size="lg"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="!bg-gradient-to-r !from-orange-500 !to-rose-500 !text-white !shadow-lg hover:!from-orange-600 hover:!to-rose-600"
-                >
-                  Get my first photoshoot for free
-                </ButtonLink>
-              }
-            />
-            <Plan
-              name="200 credits"
-              price="$97"
-              period="one-time payment"
-              subheadline={<p>200 Product Photos (Studio & Lifestyle)</p>}
-              features={[
-                '4K quality',
-                'Unlimited products',
-                'Unlimited photoshoots',
-                'Unlimited brands',
-                'Use anywhere: PDPs, ads, socials, etc...',
-              ]}
-              cta={
-                <SoftButtonLink
-                  href="https://app.yuzuu.co/signup"
-                  size="lg"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Get my first photoshoot for free
-                </SoftButtonLink>
-              }
-            />
-          </>
+      {/* CTA with Photo */}
+      <CallToActionWithPhoto
+        id="cta-photo"
+        headline="Your first photoshoot for free"
+        subheadline="Give it a try now, the results might surprise you. It won't cost you anything."
+        cta={
+          <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:gap-3">
+            <ButtonLink
+              href="https://app.yuzuu.co/signup"
+              size="lg"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="light"
+            >
+              Let's get started →
+            </ButtonLink>
+            <p className="text-sm italic text-mist-500">💳 No credit card needed</p>
+          </div>
         }
       />
       {/* Pack examples 
