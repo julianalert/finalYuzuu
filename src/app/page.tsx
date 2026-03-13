@@ -8,9 +8,6 @@ import { BeforeAfterSlider } from '@/components/elements/before-after-slider'
 import { BeforeAfterSideBySideExamples } from '@/components/elements/before-after-side-by-side-examples'
 import { ArrowNarrowRightIcon } from '@/components/icons/arrow-narrow-right-icon'
 import { ChevronIcon } from '@/components/icons/chevron-icon'
-import { CloudArrowUpIcon } from '@/components/icons/cloud-arrow-up-icon'
-import { SparklesIcon } from '@/components/icons/sparkles-icon'
-import { PhotoIcon } from '@/components/icons/photo-icon'
 import { ShieldExclamationIcon } from '@/components/icons/shield-exclamation-icon'
 import { CallToActionSimple } from '@/components/sections/call-to-action-simple'
 import { FAQsTwoColumnAccordion, Faq } from '@/components/sections/faqs-two-column-accordion'
@@ -65,7 +62,7 @@ export default function Page() {
               rel="noopener noreferrer"
               className="!bg-gradient-to-r !from-orange-500 !to-rose-500 !text-white !shadow-lg hover:!from-orange-600 hover:!to-rose-600"
             >
-              Create my photoshoot for free
+              Get my first photoshoot for free
             </ButtonLink>
           </>
         }
@@ -81,7 +78,7 @@ export default function Page() {
           </p>
         }
         cta={
-          <div className="flex items-center gap-4">
+          <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-center">
             <ButtonLink
               href="https://app.yuzuu.co/signup"
               size="lg"
@@ -89,7 +86,7 @@ export default function Page() {
               rel="noopener noreferrer"
               className="!bg-gradient-to-r !from-orange-500 !to-rose-500 !text-white !shadow-lg hover:!from-orange-600 hover:!to-rose-600"
             >
-              Get my first 5 photos for free
+              Get my first photoshoot for free
             </ButtonLink>
 
             <p className="flex items-center gap-2 text-sm italic text-mist-700 dark:text-mist-400">
@@ -138,28 +135,46 @@ export default function Page() {
           }
       >
         <BrandCard
-          logo={
-            <CloudArrowUpIcon className="size-8 text-mist-950 dark:text-white" />
-          }
           headline="1. Upload your product photo"
           text="PNG, JPG, or WebP format."
           footnote="Takes 2 seconds."
+          image={
+            <Image
+              src="/img/photoshoots/upload.png"
+              alt="Upload your product photo"
+              width={800}
+              height={500}
+              className="w-full object-cover"
+            />
+          }
         />
         <BrandCard
-          logo={
-            <SparklesIcon className="size-8 text-mist-950 dark:text-white" />
-          }
           headline="2. We do our magic"
           text="Your product is integrated into ultra-realistic scenes to improve the trustworthiness of your brand."
           footnote="Takes 30 seconds."
+          image={
+            <Image
+              src="/img/photoshoots/magic.png"
+              alt="We do our magic"
+              width={800}
+              height={500}
+              className="w-full object-cover"
+            />
+          }
         />
         <BrandCard
-          logo={
-            <PhotoIcon className="size-8 text-mist-950 dark:text-white" />
-          }
           headline="3. You get images that don't scream AI"
           text="You finally can use pictures that don't make you look like a fraud."
           footnote="+12.68% conversion rate improvement, based on 24 customers' use cases."
+          image={
+            <Image
+              src="/img/photoshoots/output.png"
+              alt="You get images that don't scream AI"
+              width={800}
+              height={500}
+              className="w-full object-cover"
+            />
+          }
         />
       </BrandsCardsMultiColumn>
       {/* Top Features - Duplicated Cards */}
@@ -434,10 +449,10 @@ export default function Page() {
             It's not about making beautiful photos
           </span>
         }
-        headline="It's about making visual content that helps e-commerce brands sell more."
+        headline="It's about making visual content that helps e-commerce brands like yours sell more."
         subheadline={
           <p>
-            We analyze your market, product, and audience to create photos that build trust, and turn attention into revenue.
+            Our model analyzes your market, product, and audience to create photos that build trust, and turn attention into revenue.
           </p>
           
         }
@@ -507,7 +522,7 @@ export default function Page() {
         />
       </TestimonialThreeColumnGrid>
       {/* More Examples - Duplicated Cards */}
-      <FeaturesTwoColumnWithDemos
+      {/* <FeaturesTwoColumnWithDemos
         id="more-examples"
         className="!pt-0 [&>div>div]:!gap-y-0.5 [&>div>div]:!gap-x-2"
         features={
@@ -642,7 +657,30 @@ export default function Page() {
             />
           </>
         }
-      />
+      /> */}
+      {/* Photoshoot Gallery */}
+      <section className="py-16">
+        <Container>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {[
+              { src: '/img/photoshoots/atelier du chocolat.png', alt: 'Atelier du Chocolat photoshoot' },
+              { src: '/img/photoshoots/atelier du chocolat2.png', alt: 'Atelier du Chocolat photoshoot 2' },
+              { src: '/img/photoshoots/fabrica.png', alt: 'Fabrica photoshoot' },
+              { src: '/img/photoshoots/TALO.png', alt: 'TALO photoshoot' },
+            ].map((photo) => (
+              <div key={photo.src} className="relative overflow-hidden rounded-xl aspect-square">
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                />
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
       {/* FAQs */}
       <FAQsTwoColumnAccordion id="faqs" headline="Questions & Answers">
         <Faq
@@ -788,17 +826,16 @@ export default function Page() {
         />
         <Faq
           id="faq-7"
-          question="What if the result doesn't feel right?"
+          question="Does the AI hallucinate sometimes?"
           answer={
             <>
-              Then we fix it.
+              Yes, it happens.
               <br />
               <br />
-              If something feels off — lighting, integration, realism — it gets adjusted.
+              AI can occasionally distort a label, duplicate a design element, or misread a texture.
               <br />
-              The goal isn't delivery.
               <br />
-              The goal is confidence using the image on your PDP.
+              It's not common, so no worries. But it's real, as with every other AI tool.
             </>
           }
         />
@@ -829,10 +866,10 @@ export default function Page() {
       {/* Pricing */}
       <PricingMultiTier
         id="pricing"
-        headline="Pricing to fit your business needs."
+        headline="It's time to say goodbye to $10k photoshoots"
         subheadline={
-          <p className="flex items-center gap-2">
-            <ShieldExclamationIcon className="size-4" /> Unlimited revisions, money back guarantee. 
+          <p>
+            Get studio &amp; lifestyle photos for your e-commerce brand, without hiring models or booking a studio.
           </p>
         }
         plans={
@@ -846,7 +883,8 @@ export default function Page() {
                 '4K quality',
                 'Unlimited products',
                 'Unlimited photoshoots',
-                'Use on PDPs, ads, socials',
+                'Unlimited brands',
+                'Use anywhere: PDPs, ads, socials, etc...',
               ]}
               cta={
                 <SoftButtonLink
@@ -855,7 +893,7 @@ export default function Page() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Get 5 photos for free
+                  Get my first photoshoot for free
                 </SoftButtonLink>
               }
             />
@@ -869,7 +907,8 @@ export default function Page() {
                 '4K quality',
                 'Unlimited products',
                 'Unlimited photoshoots',
-                'Use on PDPs, ads, socials',
+                'Unlimited brands',
+                'Use anywhere: PDPs, ads, socials, etc...',
               ]}
               cta={
                 <ButtonLink
@@ -879,7 +918,7 @@ export default function Page() {
                   rel="noopener noreferrer"
                   className="!bg-gradient-to-r !from-orange-500 !to-rose-500 !text-white !shadow-lg hover:!from-orange-600 hover:!to-rose-600"
                 >
-                  Get 5 photos for free
+                  Get my first photoshoot for free
                 </ButtonLink>
               }
             />
@@ -892,7 +931,8 @@ export default function Page() {
                 '4K quality',
                 'Unlimited products',
                 'Unlimited photoshoots',
-                'Use on PDPs, ads, socials',
+                'Unlimited brands',
+                'Use anywhere: PDPs, ads, socials, etc...',
               ]}
               cta={
                 <SoftButtonLink
@@ -901,7 +941,7 @@ export default function Page() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Get 5 photos for free
+                  Get my first photoshoot for free
                 </SoftButtonLink>
               }
             />

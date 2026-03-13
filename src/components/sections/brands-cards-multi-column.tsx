@@ -7,21 +7,24 @@ export function BrandCard({
   headline,
   text,
   footnote,
+  image,
   className,
   ...props
 }: {
-  logo: ReactNode
+  logo?: ReactNode
   headline: ReactNode
   text: ReactNode
   footnote: ReactNode
+  image?: ReactNode
 } & ComponentProps<'div'>) {
   return (
     <div
       className={clsx('flex flex-col justify-between gap-6 rounded-xl bg-mist-950/2.5 p-6 dark:bg-white/5', className)}
       {...props}
     >
+      {image && <div className="w-full overflow-hidden rounded-lg">{image}</div>}
       <div className="flex flex-col items-start gap-2">
-        <div className="flex h-8 shrink-0">{logo}</div>
+        {logo && <div className="flex h-8 shrink-0">{logo}</div>}
         <h3 className="text-base/8 font-medium text-mist-950 dark:text-white">{headline}</h3>
         <p className="text-sm/7 text-mist-700 dark:text-mist-400">{text}</p>
       </div>
