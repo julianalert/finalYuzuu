@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { ElDialog, ElDialogPanel } from '@tailwindplus/elements/react'
 import { clsx } from 'clsx/lite'
 import type { ComponentProps, ReactNode } from 'react'
+import { ChevronIcon } from '@/components/icons/chevron-icon'
 
 export function NavbarLink({
   children,
@@ -26,6 +27,64 @@ export function NavbarLink({
         </svg>
       </span>
     </Link>
+  )
+}
+
+export function NavbarDropdownItem({
+  href,
+  icon,
+  title,
+  subtitle,
+}: {
+  href: string
+  icon?: ReactNode
+  title: ReactNode
+  subtitle?: ReactNode
+}) {
+  return (
+    <Link
+      href={href}
+      className="flex items-start gap-3 rounded-lg px-3 py-2.5 hover:bg-mist-950/5 dark:hover:bg-white/10"
+    >
+      {icon && (
+        <span className="mt-0.5 shrink-0 max-lg:hidden">{icon}</span>
+      )}
+      <span className="flex flex-col gap-0.5">
+        <span className="text-sm font-medium text-mist-950 lg:text-sm dark:text-white max-lg:text-xl/9">{title}</span>
+        {subtitle && <span className="text-xs text-mist-600 dark:text-mist-400">{subtitle}</span>}
+      </span>
+    </Link>
+  )
+}
+
+export function NavbarDropdown({
+  label,
+  children,
+}: {
+  label: ReactNode
+  children: ReactNode
+}) {
+  return (
+    <div className="group relative">
+      {/* Desktop trigger */}
+      <button className="hidden lg:inline-flex items-center gap-1 text-sm/7 font-medium text-mist-950 dark:text-white cursor-pointer">
+        {label}
+        <ChevronIcon className="rotate-90 opacity-60 size-2.5" />
+      </button>
+
+      {/* Desktop dropdown panel */}
+      <div className="hidden lg:group-hover:block absolute top-full left-1/2 -translate-x-1/2 pt-2 z-20">
+        <div className="w-72 rounded-xl border border-mist-950/10 bg-mist-100 p-2 shadow-lg dark:border-white/10 dark:bg-mist-900">
+          {children}
+        </div>
+      </div>
+
+      {/* Mobile: flat list */}
+      <div className="lg:hidden flex flex-col">
+        <span className="text-3xl/10 font-medium text-mist-950 dark:text-white">{label}</span>
+        <div className="mt-1 flex flex-col gap-1 pl-4 border-l-2 border-mist-950/10 dark:border-white/10">{children}</div>
+      </div>
+    </div>
   )
 }
 

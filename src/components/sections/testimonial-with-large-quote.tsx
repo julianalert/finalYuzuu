@@ -7,6 +7,7 @@ export function TestimonialLargeQuote({
   img,
   name,
   byline,
+  media,
   className,
   ...props
 }: {
@@ -14,15 +15,17 @@ export function TestimonialLargeQuote({
   img: ReactNode
   name: ReactNode
   byline: ReactNode
+  media?: ReactNode
 } & ComponentProps<'section'>) {
   return (
-    <section className={clsx('py-16', className)} {...props}>
+    <section className={clsx('py-8', className)} {...props}>
       <Container>
         <figure className="text-mist-950 dark:text-white">
-          <blockquote className="mx-auto flex max-w-240 flex-col gap-4 text-center font-display text-[2rem]/12 tracking-tight text-pretty *:first:before:content-['“'] *:last:after:content-['”'] sm:text-5xl/16">
+          {media && <div className="mb-6 flex justify-center">{media}</div>}
+          <blockquote className="mx-auto flex max-w-240 flex-col gap-4 text-center font-display text-xl/9 tracking-tight text-pretty *:first:before:content-['\201C'] *:last:after:content-['\201D'] sm:text-3xl/12">
             {quote}
           </blockquote>
-          <figcaption className="mt-16 flex flex-col items-center">
+          <figcaption className="mt-8 flex flex-col items-center">
             <div className="flex size-12 overflow-hidden rounded-full outline -outline-offset-1 outline-black/5 *:size-full *:object-cover dark:outline-white/5">
               {img}
             </div>

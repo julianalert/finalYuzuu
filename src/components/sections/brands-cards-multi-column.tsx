@@ -14,7 +14,7 @@ export function BrandCard({
   logo?: ReactNode
   headline: ReactNode
   text: ReactNode
-  footnote: ReactNode
+  footnote?: ReactNode
   image?: ReactNode
 } & ComponentProps<'div'>) {
   return (
@@ -28,7 +28,7 @@ export function BrandCard({
         <h3 className="text-base/8 font-medium text-mist-950 dark:text-white">{headline}</h3>
         <p className="text-sm/7 text-mist-700 dark:text-mist-400">{text}</p>
       </div>
-      <p className="text-xs/6 text-mist-700 dark:text-mist-400">{footnote}</p>
+      {footnote && <p className="text-xs/6 text-mist-700 dark:text-mist-400">{footnote}</p>}
     </div>
   )
 }

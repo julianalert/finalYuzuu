@@ -1,7 +1,12 @@
 import { Main } from '@/components/elements/main'
+import { FooterNewsletterForm } from '@/components/elements/footer-newsletter-form'
 import { XIcon } from '@/components/icons/social/x-icon'
-import { SocialLink } from '@/components/sections/footer-with-links-and-social-icons'
-import { Container } from '@/components/elements/container'
+import {
+  FooterCategory,
+  FooterLink,
+  FooterWithNewsletterFormCategoriesAndSocialIcons,
+  SocialLink,
+} from '@/components/sections/footer-with-newsletter-form-categories-and-social-icons'
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import './globals.css'
@@ -90,18 +95,40 @@ export default function RootLayout({
         <>
           <Main>{children}</Main>
 
-          <footer id="footer" className="pt-16">
-            <div className="bg-mist-950/2.5 py-16 text-mist-950 dark:bg-white/5 dark:text-white">
-              <Container className="flex items-center justify-between gap-10 text-sm/7">
-                <div className="text-mist-600 dark:text-mist-500">© 2026 Yuzuu, Inc | Built with 🧡 from 🇫🇷 </div>
-                <div className="flex items-center gap-4 sm:gap-10">
-                  <SocialLink href="https://x.com/juliendvr" name="X">
-                    <XIcon />
-                  </SocialLink>
-                </div>
-              </Container>
-            </div>
-          </footer>
+          <FooterWithNewsletterFormCategoriesAndSocialIcons
+            id="footer"
+            cta={
+              <FooterNewsletterForm
+                headline="Stay in the loop"
+                subheadline={
+                  <p>Get tips, product updates, and inspiration for your next AI product shoot.</p>
+                }
+              />
+            }
+            links={
+              <>
+                <FooterCategory title="Product">
+                  <FooterLink href="/#brands">How it works</FooterLink>
+                  <FooterLink href="/use-cases">Use cases</FooterLink>
+                  <FooterLink href="/pricing">Pricing</FooterLink>
+                  <FooterLink href="https://app.yuzuu.co/signup" target="_blank" rel="noopener noreferrer">Get started</FooterLink>
+                </FooterCategory>
+                <FooterCategory title="Resources">
+                  <FooterLink href="/guide">Guide</FooterLink>
+                  <FooterLink href="/blog">Blog</FooterLink>
+                </FooterCategory>
+                <FooterCategory title="Help center">
+                  <FooterLink href="mailto:hello@yuzuu.co">Contact us</FooterLink>
+                </FooterCategory>
+              </>
+            }
+            fineprint="© 2026 Yuzuu, Inc · Built with 🧡 from 🇫🇷"
+            socialLinks={
+              <SocialLink href="https://x.com/juliendvr" name="X">
+                <XIcon />
+              </SocialLink>
+            }
+          />
         </>
       </body>
     </html>

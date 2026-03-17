@@ -23,9 +23,12 @@
   "dependencies": {
     "@tailwindplus/elements": "0.0.0-insiders.98ea4bc",
     "clsx": "^2.1.1",
+    "gray-matter": "^4.0.3",
     "next": "^16",
+    "next-mdx-remote": "^6.0.0",
     "react": "^19",
     "react-dom": "^19",
+    "rehype-slug": "^6.0.0",
     "resend": "^6.8.0",
     "stripe": "^20.2.0",
     "tailwindcss": "^4.1.18"

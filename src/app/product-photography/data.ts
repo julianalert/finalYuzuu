@@ -1,0 +1,436 @@
+export type SiloCategory = 'industry' | 'product' | 'style'
+
+export type SiloItem = {
+  slug: string
+  label: string
+  category: SiloCategory
+  heroTitle: string
+  description: string
+}
+
+export const industries: SiloItem[] = [
+  {
+    slug: 'beauty',
+    label: 'Beauty',
+    category: 'industry',
+    heroTitle: 'Beauty Product Photography',
+    description:
+      'Create stunning AI-powered beauty product photos that convert. From foundation to highlighter, generate ultra-realistic studio and lifestyle shots that make every SKU irresistible to shoppers.',
+  },
+  {
+    slug: 'cosmetics',
+    label: 'Cosmetics',
+    category: 'industry',
+    heroTitle: 'Cosmetics Product Photography',
+    description:
+      'Generate photo-realistic cosmetics imagery without booking a studio. Lipsticks, palettes, blushes — every product looks polished, professional, and ready to sell.',
+  },
+  {
+    slug: 'fashion',
+    label: 'Fashion',
+    category: 'industry',
+    heroTitle: 'Fashion Product Photography',
+    description:
+      'Elevate your fashion brand with AI product photos that look like a full editorial shoot. Studio whites, lifestyle contexts, flat lays — all without a photographer.',
+  },
+  {
+    slug: 'supplements',
+    label: 'Supplements',
+    category: 'industry',
+    heroTitle: 'Supplements Product Photography',
+    description:
+      'Build trust and boost conversions with clean, professional supplement product photos. Generate gym-ready lifestyle shots and sleek studio images that speak to your customers.',
+  },
+  {
+    slug: 'food',
+    label: 'Food',
+    category: 'industry',
+    heroTitle: 'Food Product Photography',
+    description:
+      'Make your food products impossible to scroll past. AI-generated food photography that captures appetite appeal — from packaged goods to artisan products — with studio precision.',
+  },
+  {
+    slug: 'electronics',
+    label: 'Electronics',
+    category: 'industry',
+    heroTitle: 'Electronics Product Photography',
+    description:
+      'Showcase your electronics with crisp, high-tech product photography. From consumer gadgets to accessories, generate lifestyle and studio shots that highlight features and drive clicks.',
+  },
+  {
+    slug: 'home-decor',
+    label: 'Home Decor',
+    category: 'industry',
+    heroTitle: 'Home Decor Product Photography',
+    description:
+      'Help customers imagine your home decor in their space. Generate warm, styled lifestyle photography and clean studio shots that turn browsers into buyers.',
+  },
+  {
+    slug: 'luxury-brands',
+    label: 'Luxury Brands',
+    category: 'industry',
+    heroTitle: 'Luxury Brand Product Photography',
+    description:
+      'Luxury demands perfection. Create flawless, high-end product imagery with the visual language of premium brands — dramatic lighting, elegant backdrops, and impeccable detail.',
+  },
+]
+
+export const products: SiloItem[] = [
+  {
+    slug: 'perfume',
+    label: 'Perfume',
+    category: 'product',
+    heroTitle: 'Perfume Product Photography',
+    description:
+      'Capture the allure of your fragrance in every pixel. AI-generated perfume photography with moody lighting, elegant props, and cinematic depth that evokes the scent itself.',
+  },
+  {
+    slug: 'skincare',
+    label: 'Skincare',
+    category: 'product',
+    heroTitle: 'Skincare Product Photography',
+    description:
+      'Generate clean, clinical, and aspirational skincare product photos. Serums, moisturizers, and masks presented in studio-perfect lighting that builds brand credibility.',
+  },
+  {
+    slug: 'serum',
+    label: 'Serum',
+    category: 'product',
+    heroTitle: 'Serum Product Photography',
+    description:
+      'Make your serum the hero of every frame. Ultra-detailed AI product photography that highlights dropper precision, luxurious textures, and ingredient transparency.',
+  },
+  {
+    slug: 'cream',
+    label: 'Cream',
+    category: 'product',
+    heroTitle: 'Cream Product Photography',
+    description:
+      'Soft, inviting, and irresistibly tactile — generate AI cream and moisturizer product photos that communicate richness and quality without a single studio booking.',
+  },
+  {
+    slug: 'jewelry',
+    label: 'Jewelry',
+    category: 'product',
+    heroTitle: 'Jewelry Product Photography',
+    description:
+      'Jewelry photography that does justice to every gem and metal. AI-generated images with macro detail, reflective surfaces, and lifestyle contexts that make your pieces shine.',
+  },
+  {
+    slug: 'necklace',
+    label: 'Necklace',
+    category: 'product',
+    heroTitle: 'Necklace Product Photography',
+    description:
+      'Showcase your necklaces in their best light. From delicate chains to statement pendants, generate studio close-ups and lifestyle shots that drive jewellery sales.',
+  },
+  {
+    slug: 'ring',
+    label: 'Ring',
+    category: 'product',
+    heroTitle: 'Ring Product Photography',
+    description:
+      'Every facet, every detail — stunning ring product photography generated by AI. Perfect for engagement rings, fine jewellery, and fashion rings sold online.',
+  },
+  {
+    slug: 'bracelet',
+    label: 'Bracelet',
+    category: 'product',
+    heroTitle: 'Bracelet Product Photography',
+    description:
+      'From delicate bangles to bold cuffs, generate bracelet product photos with the elegance and detail your pieces deserve — no photo studio required.',
+  },
+  {
+    slug: 'watch',
+    label: 'Watch',
+    category: 'product',
+    heroTitle: 'Watch Product Photography',
+    description:
+      'Precision-crafted watch photography, generated by AI. Capture dial detail, strap texture, and brand heritage in images that reflect the quality of your timepiece.',
+  },
+  {
+    slug: 'sunglasses',
+    label: 'Sunglasses',
+    category: 'product',
+    heroTitle: 'Sunglasses Product Photography',
+    description:
+      'Make every frame a style statement. Generate AI sunglasses product photos — from editorial lifestyle shots to clean studio whites — that sell the look, not just the product.',
+  },
+  {
+    slug: 'shoes',
+    label: 'Shoes',
+    category: 'product',
+    heroTitle: 'Shoes Product Photography',
+    description:
+      'Step up your footwear listings with AI-generated shoe product photography. Studio flat lays, lifestyle street shots, and detail close-ups that convert casual browsers.',
+  },
+  {
+    slug: 'sneakers',
+    label: 'Sneakers',
+    category: 'product',
+    heroTitle: 'Sneakers Product Photography',
+    description:
+      'Hypebeast-worthy sneaker photography, generated by AI. Street lifestyle, clean studio, and creative angles that match the energy of your drops and collections.',
+  },
+  {
+    slug: 'handbag',
+    label: 'Handbag',
+    category: 'product',
+    heroTitle: 'Handbag Product Photography',
+    description:
+      'Luxury or accessible, every handbag deserves a great photo. Generate structured studio shots and editorial lifestyle images that show off stitching, hardware, and shape.',
+  },
+  {
+    slug: 'wallet',
+    label: 'Wallet',
+    category: 'product',
+    heroTitle: 'Wallet Product Photography',
+    description:
+      'Sleek, minimal, and perfectly composed — AI wallet product photography that highlights leather quality, card slots, and craftsmanship in every shot.',
+  },
+  {
+    slug: 't-shirt',
+    label: 'T-Shirt',
+    category: 'product',
+    heroTitle: 'T-Shirt Product Photography',
+    description:
+      'Ghost mannequin, flat lay, or lifestyle — generate t-shirt product photos that showcase fit, fabric, and print without the cost of models or studios.',
+  },
+  {
+    slug: 'hoodie',
+    label: 'Hoodie',
+    category: 'product',
+    heroTitle: 'Hoodie Product Photography',
+    description:
+      'Cozy, aspirational, and scroll-stopping — generate hoodie product photography across studio and lifestyle settings that capture the comfort and personality of your brand.',
+  },
+  {
+    slug: 'protein-powder',
+    label: 'Protein Powder',
+    category: 'product',
+    heroTitle: 'Protein Powder Product Photography',
+    description:
+      'Performance-first protein powder photography powered by AI. Gym-ready lifestyle shots and clean studio packaging images that speak to athletes and fitness enthusiasts.',
+  },
+  {
+    slug: 'vitamins',
+    label: 'Vitamins',
+    category: 'product',
+    heroTitle: 'Vitamins Product Photography',
+    description:
+      'Clean, clinical, and trustworthy — generate vitamins and supplement product photography that builds confidence at the point of purchase.',
+  },
+  {
+    slug: 'candles',
+    label: 'Candles',
+    category: 'product',
+    heroTitle: 'Candles Product Photography',
+    description:
+      'Warm glows, soft textures, and ambient vibes — AI-generated candle product photography that captures the mood of your brand and makes every jar irresistible.',
+  },
+  {
+    slug: 'soap',
+    label: 'Soap',
+    category: 'product',
+    heroTitle: 'Soap Product Photography',
+    description:
+      'Artisan or minimalist, generate soap product photos with lather, texture, and ingredient detail that communicate craft and quality to conscious shoppers.',
+  },
+  {
+    slug: 'coffee',
+    label: 'Coffee',
+    category: 'product',
+    heroTitle: 'Coffee Product Photography',
+    description:
+      'Aromatic, rich, and deeply aspirational — AI coffee product photography with lifestyle brewing scenes and clean studio packaging shots that convert coffee lovers.',
+  },
+  {
+    slug: 'tea',
+    label: 'Tea',
+    category: 'product',
+    heroTitle: 'Tea Product Photography',
+    description:
+      'Serene, premium, and ritual-forward — generate tea product photography that evokes calm, quality, and the full sensory experience of your blends.',
+  },
+  {
+    slug: 'wine-bottle',
+    label: 'Wine Bottle',
+    category: 'product',
+    heroTitle: 'Wine Bottle Product Photography',
+    description:
+      'Sommelier-worthy wine bottle photography, generated by AI. Cellar shots, table settings, and studio elegance that position your label at the premium end of the shelf.',
+  },
+  {
+    slug: 'water-bottle',
+    label: 'Water Bottle',
+    category: 'product',
+    heroTitle: 'Water Bottle Product Photography',
+    description:
+      'Active, clean, and built for the outdoors — generate water bottle product photos in gym, trail, and studio settings that speak directly to your active customer.',
+  },
+  {
+    slug: 'phone-case',
+    label: 'Phone Case',
+    category: 'product',
+    heroTitle: 'Phone Case Product Photography',
+    description:
+      'Sharp detail, on-device lifestyle shots, and studio flat lays — generate phone case product photography that highlights design, material, and drop protection.',
+  },
+  {
+    slug: 'airpods-case',
+    label: 'AirPods Case',
+    category: 'product',
+    heroTitle: 'AirPods Case Product Photography',
+    description:
+      'Compact, precise, and detail-rich — AI-generated AirPods case photography in desk lifestyle and studio contexts that showcase your design in its best light.',
+  },
+  {
+    slug: 'headphones',
+    label: 'Headphones',
+    category: 'product',
+    heroTitle: 'Headphones Product Photography',
+    description:
+      'Immersive, high-fidelity product photos for your headphones. Generate lifestyle listening scenes and technical studio shots that communicate audio quality visually.',
+  },
+  {
+    slug: 'gaming-mouse',
+    label: 'Gaming Mouse',
+    category: 'product',
+    heroTitle: 'Gaming Mouse Product Photography',
+    description:
+      'Aggressive angles, RGB lighting, and desk battlestation setups — generate gaming mouse product photography that speaks the language of the gaming community.',
+  },
+  {
+    slug: 'keyboard',
+    label: 'Keyboard',
+    category: 'product',
+    heroTitle: 'Keyboard Product Photography',
+    description:
+      'Keycap detail, desk setup aesthetics, and clean studio shots — generate keyboard product photography for mechanical, gaming, and productivity boards that enthusiasts will love.',
+  },
+  {
+    slug: 'laptop-stand',
+    label: 'Laptop Stand',
+    category: 'product',
+    heroTitle: 'Laptop Stand Product Photography',
+    description:
+      'Workspace-ready and ergonomically positioned — generate laptop stand product photos in real desk environments and clean studio settings that highlight build quality.',
+  },
+  {
+    slug: 'desk-lamp',
+    label: 'Desk Lamp',
+    category: 'product',
+    heroTitle: 'Desk Lamp Product Photography',
+    description:
+      'Warm light, modern design, and workspace atmosphere — AI-generated desk lamp photography in home office setups and studio contexts that illuminate your product\'s best features.',
+  },
+]
+
+export const styles: SiloItem[] = [
+  {
+    slug: 'studio',
+    label: 'Studio',
+    category: 'style',
+    heroTitle: 'Studio Product Photography',
+    description:
+      'Classic, controlled, and conversion-optimised — generate studio product photography with professional lighting, neutral backdrops, and impeccable composition for any product.',
+  },
+  {
+    slug: 'studio-clean',
+    label: 'Studio Clean',
+    category: 'style',
+    heroTitle: 'Studio Clean Product Photography',
+    description:
+      'Pure white backgrounds, sharp shadows, and pixel-perfect product isolation. Generate studio-clean product photos that are marketplace-ready and brand-consistent.',
+  },
+  {
+    slug: 'lifestyle',
+    label: 'Lifestyle',
+    category: 'style',
+    heroTitle: 'Lifestyle Product Photography',
+    description:
+      'Put your product in the hands of real life. Generate lifestyle product photography that places your items in authentic, aspirational contexts that your customers recognise.',
+  },
+  {
+    slug: 'cinematic',
+    label: 'Cinematic',
+    category: 'style',
+    heroTitle: 'Cinematic Product Photography',
+    description:
+      'Bold contrast, deep shadows, and a movie-quality aesthetic — generate cinematic product photography that turns your product into the hero of a visual story.',
+  },
+  {
+    slug: 'ugc',
+    label: 'UGC',
+    category: 'style',
+    heroTitle: 'UGC-Style Product Photography',
+    description:
+      'Raw, authentic, and scroll-native — generate UGC-style product photography that blends into social feeds, builds trust, and drives performance in paid and organic.',
+  },
+  {
+    slug: 'creative',
+    label: 'Creative',
+    category: 'style',
+    heroTitle: 'Creative Product Photography',
+    description:
+      'Break the mould with AI-generated creative product photography. Surreal compositions, unexpected props, and bold colour stories that make your brand impossible to ignore.',
+  },
+  {
+    slug: 'minimalist',
+    label: 'Minimalist',
+    category: 'style',
+    heroTitle: 'Minimalist Product Photography',
+    description:
+      'Less is more. Generate minimalist product photography with clean composition, negative space, and understated elegance that lets your product speak for itself.',
+  },
+  {
+    slug: 'luxury',
+    label: 'Luxury',
+    category: 'style',
+    heroTitle: 'Luxury Product Photography',
+    description:
+      'Opulent materials, refined lighting, and premium visual language — generate luxury-style product photography that commands premium pricing and brand prestige.',
+  },
+  {
+    slug: 'outdoor',
+    label: 'Outdoor',
+    category: 'style',
+    heroTitle: 'Outdoor Product Photography',
+    description:
+      'Natural light, open environments, and authentic outdoor contexts — generate outdoor product photography that resonates with adventure-seekers and nature-conscious shoppers.',
+  },
+  {
+    slug: 'macro-detail',
+    label: 'Macro Detail',
+    category: 'style',
+    heroTitle: 'Macro Detail Product Photography',
+    description:
+      'Reveal the texture, grain, and craftsmanship customers can\'t see in a standard shot. Generate macro-detail product photography that builds trust through transparency.',
+  },
+  {
+    slug: 'dramatic-lighting',
+    label: 'Dramatic Lighting',
+    category: 'style',
+    heroTitle: 'Dramatic Lighting Product Photography',
+    description:
+      'Hard light, deep shadows, and high contrast — generate dramatic lighting product photography that gives your product a powerful, confident visual identity.',
+  },
+  {
+    slug: 'flatlay',
+    label: 'Flatlay',
+    category: 'style',
+    heroTitle: 'Flatlay Product Photography',
+    description:
+      'Overhead, editorial, and perfectly arranged — generate flatlay product photography ideal for social media, gifting campaigns, and multi-product story telling.',
+  },
+]
+
+export const allItems: SiloItem[] = [...industries, ...products, ...styles]
+
+export function getItemBySlug(slug: string): SiloItem | undefined {
+  return allItems.find((item) => item.slug === slug)
+}
+
+export function getAllSlugs(): string[] {
+  return [...new Set(allItems.map((item) => item.slug))]
+}

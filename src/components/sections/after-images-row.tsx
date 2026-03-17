@@ -14,7 +14,7 @@ export type SliderCard = {
 }
 
 // Hero: images from /public/img/examples (ai-product-photography set)
-const SLIDER_CARDS: SliderCard[] = [
+const DEFAULT_SLIDER_CARDS: SliderCard[] = [
   { id: '1', title: 'AI Product Photo', category: 'Product', image: '/img/examples/ai-product-photography.png' },
   { id: '2', title: 'AI Product Photo', category: 'Product', image: '/img/examples/ai-product-photography-3.png' },
   { id: '3', title: 'AI Product Photo', category: 'Product', image: '/img/examples/ai-product-photography-2.png' },
@@ -28,11 +28,10 @@ const CARD_WIDTH = 200
 const CARD_GAP = 12
 const SNAP_OFFSET = CARD_WIDTH + CARD_GAP
 
-function AfterImagesSliderInner() {
+function AfterImagesSliderInner({ cards = DEFAULT_SLIDER_CARDS }: { cards?: SliderCard[] }) {
   const scrollRef = useRef<HTMLDivElement>(null)
   const [canScrollLeft, setCanScrollLeft] = useState(false)
   const [canScrollRight, setCanScrollRight] = useState(true)
-  const cards = SLIDER_CARDS
 
   const updateScrollState = () => {
     const el = scrollRef.current
@@ -159,14 +158,18 @@ function AfterImagesSliderInner() {
   )
 }
 
-export function AfterImagesRowSection({ className, ...props }: React.ComponentProps<'section'>) {
+export function AfterImagesRowSection({
+  cards,
+  className,
+  ...props
+}: { cards?: SliderCard[] } & React.ComponentProps<'section'>) {
   return (
     <section
       className={clsx('w-screen max-w-none py-6', className)}
       style={{ marginLeft: 'calc(-50vw + 50%)' }}
       {...props}
     >
-      <AfterImagesSliderInner />
+      <AfterImagesSliderInner cards={cards} />
     </section>
   )
 }
