@@ -23,9 +23,9 @@ const SILO_CARDS = [
 ]
 
 export const metadata: Metadata = {
-  title: 'AI Product Photography — All Styles, Products & Industries | Yuzuu',
+  title: 'Product Photography for e-Commerce | Yuzuu',
   description:
-    'Explore AI-generated product photography by industry, product type, and visual style. Studio, lifestyle, cinematic, UGC and more — created in minutes, not days.',
+    'Explore product photography ideas by industry, product type, and visual style. Studio, lifestyle, cinematic, UGC and more. Generate professional photos in minutes.',
   alternates: {
     canonical: 'https://www.yuzuu.co/product-photography',
   },
@@ -38,7 +38,7 @@ export default function Page() {
 
       <HeroLeftAlignedWithDemo
         id="hero"
-        headline="Product Photography: Ideas, Examples & Styles"
+        headline="Product Photography For e-Commerce"
         subheadline={
           <p>
             Explore product photography ideas, styles, and examples for different industries and products. Get inspiration and generate professional product photos instantly.
@@ -68,20 +68,6 @@ export default function Page() {
         title="Product Photography By Industry"
         description="Product photography tailored to your sector: beauty, fashion, electronics, food, and more."
         items={industries}
-      />
-
-      <SiloCategoryCardsSection
-        id="by-product"
-        title="Product Photography By Product"
-        description="From perfume to gaming mice, find the exact product photography you need and see how you can easily create it with AI."
-        items={products}
-      />
-
-      <SiloCategoryCardsSection
-        id="by-style"
-        title="Product Photography By Style"
-        description="Studio-clean, cinematic, UGC, luxury, flatlay: choose the visual style that fits your brand."
-        items={styles}
       />
 
       <SiteCTA />

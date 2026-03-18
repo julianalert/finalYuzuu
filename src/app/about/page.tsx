@@ -7,6 +7,7 @@ import { HeroLeftAlignedWithPhoto } from '@/components/sections/hero-left-aligne
 import { Stat, StatsWithGraph } from '@/components/sections/stats-with-graph'
 import { TeamFourColumnGrid, TeamMember } from '@/components/sections/team-four-column-grid'
 import { TestimonialTwoColumnWithLargePhoto } from '@/components/sections/testimonial-two-column-with-large-photo'
+import { Feature, FeaturesThreeColumn } from '@/components/sections/features-three-column'
 
 export default function Page() {
   return (
@@ -67,6 +68,75 @@ export default function Page() {
         }
         name="Lynn Marshall"
         byline="Founder at Pine Labs"
+      />
+      {/* Values */}
+      <FeaturesThreeColumn
+        id="values"
+        headline="Our values."
+        subheadline={
+          <p>
+            Work smarter, reply faster, and keep every customer conversation right where it belongs: in one simple
+            inbox, where you can ignore it.
+          </p>
+        }
+        features={
+          <>
+            <Feature
+              headline="Innovation"
+              subheadline={
+                <p>
+                  We are constantly pushing the boundaries of what is possible, and legal, in customer support to
+                  deliver cutting-edge solutions for our clients.
+                </p>
+              }
+            />
+            <Feature
+              headline="Integrity"
+              subheadline={
+                <p>
+                  We are driven by a commitment to ethical business practices, transparency, and most of all,
+                  maximizing shareholder value.
+                </p>
+              }
+            />
+            <Feature
+              headline="Collaboration"
+              subheadline={
+                <p>
+                  We believe teamwork makes the dream work, especially when that dream is offshoring local jobs to
+                  the lowest bidder.
+                </p>
+              }
+            />
+            <Feature
+              headline="Diversity"
+              subheadline={
+                <p>
+                  Diversity can mean many things, but to us it mainly means hiring people from countries with the
+                  lowest labour costs.
+                </p>
+              }
+            />
+            <Feature
+              headline="Accountability"
+              subheadline={
+                <p>
+                  Our customers success is our success and their failure is our failure, except in the legal sense
+                  where our liability is limited.
+                </p>
+              }
+            />
+            <Feature
+              headline="Quality"
+              subheadline={
+                <p>
+                  We believe that you can move fast without breaking things, unless those things are labour laws in
+                  third world countries.
+                </p>
+              }
+            />
+          </>
+        }
       />
       {/* Team */}
       <TeamFourColumnGrid

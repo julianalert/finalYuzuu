@@ -114,6 +114,7 @@ export default function RootLayout({
                   <FooterLink href="https://app.yuzuu.co/signup" target="_blank" rel="noopener noreferrer">Get started</FooterLink>
                 </FooterCategory>
                 <FooterCategory title="Resources">
+                  <FooterLink href="/product-photography">Product Photography</FooterLink>
                   <FooterLink href="/guide">Guide</FooterLink>
                   <FooterLink href="/blog">Blog</FooterLink>
                 </FooterCategory>
