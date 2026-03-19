@@ -96,7 +96,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
               <div key={i} className="flex items-center gap-2 text-sm text-white/70">
                 <span className="size-1.5 shrink-0 rounded-full bg-orange-500" />
                 {item.bold && <strong className="text-white">{item.bold}</strong>}
-                <span>{item.text}</span>
+                {item.text && <span>{item.text}</span>}
               </div>
             ))}
           </div>

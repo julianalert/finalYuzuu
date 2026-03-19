@@ -25,7 +25,7 @@ export interface CompetitorFaq {
 
 export interface TrustItem {
   bold?: string
-  text: string
+  text?: string
 }
 
 export interface CompetitorData {
@@ -882,7 +882,7 @@ const claidAi: CompetitorData = {
     { bold: '4K', text: 'on every plan' },
     { bold: 'Unlimited', text: 'photoshoots' },
     { text: 'Sports, food, home goods & more' },
-    { bold: 'No credit complexity' },
+    { bold: 'No credit complexity', text: '' },
   ],
   comparisonIntro:
     "Both platforms are purpose-built for product photography. Here's where the differences matter for your workflow and budget.",
