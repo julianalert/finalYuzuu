@@ -25,10 +25,7 @@ const SILO_CARDS = [
 export const metadata: Metadata = {
   title: 'Product Photography for e-Commerce | Yuzuu',
   description:
-    'Explore product photography ideas by industry, product type, and visual style. Studio, lifestyle, cinematic, UGC and more. Generate professional photos in minutes.',
-  alternates: {
-    canonical: 'https://www.yuzuu.co/product-photography',
-  },
+    'Ultra-realistic studio & lifestyle photos for e-commerce, without hiring models or booking a studio. Perfect for product pages, ads, social media, and more.',
 }
 
 export default function Page() {

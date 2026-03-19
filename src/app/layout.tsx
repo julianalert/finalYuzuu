@@ -118,6 +118,13 @@ export default function RootLayout({
                   <FooterLink href="/guide">Guide</FooterLink>
                   <FooterLink href="/blog">Blog</FooterLink>
                 </FooterCategory>
+                <FooterCategory title="Alternatives">
+                  <FooterLink href="/alternative-to/pomelli">Yuzuu vs Pomelli</FooterLink>
+                  <FooterLink href="/alternative-to/photoroom">Yuzuu vs Photoroom</FooterLink>
+                  <FooterLink href="/alternative-to/pebblely">Yuzuu vs Pebblely</FooterLink>
+                  <FooterLink href="/alternative-to/flair-ai">Yuzuu vs Flair.ai</FooterLink>
+                  <FooterLink href="/alternative-to/claid-ai">Yuzuu vs Claid.ai</FooterLink>
+                </FooterCategory>
                 <FooterCategory title="Help center">
                   <FooterLink href="mailto:hello@yuzuu.co">Contact us</FooterLink>
                 </FooterCategory>
