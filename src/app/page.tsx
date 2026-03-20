@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 
 import { Container } from '@/components/elements/container'
@@ -18,9 +19,76 @@ import { Stat, StatsWithGraph } from '@/components/sections/stats-with-graph'
 import { Testimonial, TestimonialThreeColumnGrid } from '@/components/sections/testimonials-three-column-grid'
 import { BrandCard, BrandsCardsMultiColumn } from '@/components/sections/brands-cards-multi-column'
 import { AfterImagesRowSection } from '@/components/sections/after-images-row'
+
+export const metadata: Metadata = {
+  title: 'AI Product Photos that do not look like AI - Yuzuu',
+  description:
+    'Ultra-realistic studio & lifestyle photos for e-commerce, without hiring models or booking a studio. Perfect for PDPs, ads, and social media.',
+  alternates: {
+    canonical: 'https://www.yuzuu.co',
+  },
+}
+
+const faqs = [
+  {
+    question: "Isn't AI product photography obvious?",
+    answer:
+      "It usually is. That's the problem. Most AI photos are over-polished, over-lit, and instantly feel fake. Our algorithm's approach is the opposite: subtle, imperfect, believable. If someone can tell it's AI, the job failed.",
+  },
+  {
+    question: 'Will this work on real product pages, not just ads?',
+    answer:
+      "Yes, and that's exactly what it's built for. These photos are designed to live on PDPs, landing pages, paid ads, and marketplaces. They blend in like a real studio shoot.",
+  },
+  {
+    question: "Are you redesigning or 'improving' my product?",
+    answer:
+      'No. Your product stays 100% unchanged: same proportions, same colors, same textures, same packaging details. No creative interpretation. No AI enhancement.',
+  },
+  {
+    question: 'How is this different from other AI photo tools?',
+    answer:
+      'Most tools optimize for "Wow, this looks cool." Our tool optimizes for "This feels real, I trust it." That means natural lighting, realistic environments, no AI smoothing or glow, and no stock-photo stiffness. Conversion beats novelty.',
+  },
+  {
+    question: 'Will customers know this was made with AI?',
+    answer:
+      "They won't ask and that's the point. People don't think \"Is this AI?\" They think \"Do I trust this product?\" If the photo feels real, the question never comes up.",
+  },
+  {
+    question: 'Why not just do a real photoshoot?',
+    answer:
+      'You can and you should, when it makes sense. But real shoots are expensive, slow, hard to iterate, and painful to reshoot for every variation. This gives you studio-quality results, faster, cheaper, and without coordination hell.',
+  },
+  {
+    question: 'Does the AI hallucinate sometimes?',
+    answer:
+      "Yes, it happens. AI can occasionally distort a label, duplicate a design element, or misread a texture. It's not common, so no worries. But it's real, as with every other AI tool.",
+  },
+  {
+    question: 'Who is this NOT for?',
+    answer:
+      "This is not for AI art projects, fantasy visuals, over-stylized branding, or people chasing trends instead of sales. It's for brands who care about trust and conversion.",
+  },
+]
+
 export default function Page() {
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <SiteNavbar />
       {/* Hero */}
       <HeroLeftAlignedWithDemo

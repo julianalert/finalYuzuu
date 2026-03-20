@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 
 import { ButtonLink, PlainButtonLink } from '@/components/elements/button'
@@ -8,6 +9,15 @@ import { Stat, StatsWithGraph } from '@/components/sections/stats-with-graph'
 import { TeamFourColumnGrid, TeamMember } from '@/components/sections/team-four-column-grid'
 import { TestimonialTwoColumnWithLargePhoto } from '@/components/sections/testimonial-two-column-with-large-photo'
 import { Feature, FeaturesThreeColumn } from '@/components/sections/features-three-column'
+
+export const metadata: Metadata = {
+  title: 'About Yuzuu - AI Product Photography for E-Commerce',
+  description:
+    'Learn about Yuzuu and our mission to help e-commerce brands create ultra-realistic product photos with AI.',
+  alternates: {
+    canonical: 'https://www.yuzuu.co/about',
+  },
+}
 
 export default function Page() {
   return (

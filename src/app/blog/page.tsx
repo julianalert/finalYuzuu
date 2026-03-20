@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 
 import { ButtonLink } from '@/components/elements/button'
@@ -7,6 +8,15 @@ import { Feature, FeaturesTwoColumnWithDemos } from '@/components/sections/featu
 import { HeroLeftAlignedWithDemo } from '@/components/sections/hero-left-aligned-with-demo'
 import { SiteNavbar } from '@/components/sections/site-navbar'
 import { getAllPosts } from '@/lib/blog'
+
+export const metadata: Metadata = {
+  title: 'Blog - AI Product Photography Tips & Guides | Yuzuu',
+  description:
+    'Guides, tips, and insights on product photography for e-commerce brands. Learn how to create stunning product photos with AI.',
+  alternates: {
+    canonical: 'https://www.yuzuu.co/blog',
+  },
+}
 
 export default function Page() {
   const posts = getAllPosts()

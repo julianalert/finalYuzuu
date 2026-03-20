@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 
 import { ButtonLink } from '@/components/elements/button'
@@ -6,6 +7,15 @@ import { SiteCTA } from '@/components/sections/site-cta'
 import { Feature, FeaturesTwoColumnWithDemos } from '@/components/sections/features-two-column-with-demos'
 import { HeroLeftAlignedWithDemo } from '@/components/sections/hero-left-aligned-with-demo'
 import { SiteNavbar } from '@/components/sections/site-navbar'
+
+export const metadata: Metadata = {
+  title: 'Use Cases - How Brands Use AI Product Photography | Yuzuu',
+  description:
+    'See how e-commerce brands create high-converting product photos with AI. From new brand photoshoots to product page updates and ad creatives.',
+  alternates: {
+    canonical: 'https://www.yuzuu.co/use-cases',
+  },
+}
 
 export default function Page() {
   return (

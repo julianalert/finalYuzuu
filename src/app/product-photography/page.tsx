@@ -13,24 +13,66 @@ import { Container } from '@/components/elements/container'
 import { industries, products, styles } from './data'
 
 const SILO_CARDS = [
-  { id: '1', title: 'Product Photography', category: 'Studio', image: '/img/product-photography/product-photography.png' },
-  { id: '2', title: 'Fashion Photography', category: 'Fashion', image: '/img/product-photography/fashion-product-hotography.png' },
-  { id: '3', title: 'Fashion Photo', category: 'Fashion', image: '/img/product-photography/fashion-product-photo.png' },
-  { id: '4', title: 'Food & Supplements', category: 'Food', image: '/img/product-photography/food-supplements-photo.png' },
-  { id: '5', title: 'Home Decor', category: 'Home', image: '/img/product-photography/home-decor-photography.png' },
-  { id: '6', title: 'Lifestyle', category: 'Lifestyle', image: '/img/product-photography/lifestyle-product-photo.png' },
-  { id: '7', title: 'Studio', category: 'Studio', image: '/img/product-photography/studio-photo.png' },
+  { id: '1', title: 'Product Photography', category: 'Studio', image: '/img/product-photography/product-photography.png', href: '/product-photography/studio' },
+  { id: '2', title: 'Fashion Photography', category: 'Fashion', image: '/img/product-photography/fashion-product-hotography.png', href: '/product-photography/fashion' },
+  { id: '3', title: 'Fashion Photo', category: 'Fashion', image: '/img/product-photography/fashion-product-photo.png', href: '/product-photography/fashion' },
+  { id: '4', title: 'Food & Supplements', category: 'Food', image: '/img/product-photography/food-supplements-photo.png', href: '/product-photography/food' },
+  { id: '5', title: 'Home Decor', category: 'Home', image: '/img/product-photography/home-decor-photography.png', href: '/product-photography/home-decor' },
+  { id: '6', title: 'Lifestyle', category: 'Lifestyle', image: '/img/product-photography/lifestyle-product-photo.png', href: '/product-photography/lifestyle' },
+  { id: '7', title: 'Studio', category: 'Studio', image: '/img/product-photography/studio-photo.png', href: '/product-photography/studio' },
 ]
 
 export const metadata: Metadata = {
   title: 'Product Photography for e-Commerce | Yuzuu',
   description:
     'Ultra-realistic studio & lifestyle photos for e-commerce, without hiring models or booking a studio. Perfect for product pages, ads, social media, and more.',
+  alternates: {
+    canonical: 'https://www.yuzuu.co/product-photography',
+  },
 }
 
+const hubFaqs = [
+  {
+    question: 'What is product photography?',
+    answer:
+      "Product photography is the practice of photographing physical goods to use in marketing, e-commerce listings, ads, and social media. The goal is simple: make a product look as appealing and trustworthy as possible so shoppers feel confident buying it. Good product photography communicates quality, builds brand identity, and removes the doubt that stops people from clicking 'Add to Cart'.",
+  },
+  {
+    question: 'How do you photograph products for e-commerce?',
+    answer:
+      'Traditional e-commerce product photography involves a camera, controlled lighting (usually softboxes or a light tent), a backdrop (typically white or grey), and a tripod. You shoot multiple angles, then edit in post-production. With AI product photography like Yuzuu, you skip all of that: upload a photo of your product, and our AI generates studio-quality and lifestyle images in under a minute.',
+  },
+  {
+    question: 'What background is best for product photography?',
+    answer:
+      "It depends on the context. For marketplace listings (Amazon, Shopify, etc.), a pure white background is the industry standard. For brand websites and social media, coloured, textured, or lifestyle backgrounds perform better. With AI, you don't have to choose — generate the same product on a white studio background for your PDP, then drop it into a lifestyle scene for your ads.",
+  },
+  {
+    question: 'What lighting is used for product photography?',
+    answer:
+      'The most common setups are softbox lighting, ring lights, and natural window light. Professional studios use a combination of key lights, fill lights, and rim lights. AI-generated product photos sidestep the problem entirely: the lighting is always consistent, controlled, and optimised for your product type.',
+  },
+  {
+    question: 'Can AI generate product photography?',
+    answer:
+      "Yes, and it's far more capable than most people expect. Modern AI product photography tools like Yuzuu can place your real product into ultra-realistic studio and lifestyle scenes that are indistinguishable from a professional shoot. The AI preserves your product's exact appearance while generating a completely new, photorealistic environment around it. Brands using Yuzuu have seen an average 12.68% improvement in conversion rate.",
+  },
+]
+
 export default function Page() {
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: hubFaqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    })),
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <SiteNavbar />
 
       <HeroLeftAlignedWithDemo
@@ -65,6 +107,20 @@ export default function Page() {
         title="Product Photography By Industry"
         description="Product photography tailored to your sector: beauty, fashion, electronics, food, and more."
         items={industries}
+      />
+
+      <SiloCategoryCardsSection
+        id="by-product"
+        title="Product Photography By Product"
+        description="Find photography inspiration for your specific product type."
+        items={products}
+      />
+
+      <SiloCategoryCardsSection
+        id="by-style"
+        title="Product Photography By Style"
+        description="Explore different photography styles to find the right look for your brand."
+        items={styles}
       />
 
       <SiteCTA />

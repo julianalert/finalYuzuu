@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 
+import { Breadcrumbs } from '@/components/elements/breadcrumbs'
 import { ButtonLink } from '@/components/elements/button'
 import { SiteCTA } from '@/components/sections/site-cta'
 import { HeroTwoColumnWithPhoto } from '@/components/sections/hero-two-column-with-photo'
@@ -37,6 +38,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `${item.heroTitle} | Yuzuu`,
       description: item.description,
+      ...(item.image && {
+        images: [{ url: `https://www.yuzuu.co${item.image}`, width: 1200, height: 630, alt: item.heroTitle }],
+      }),
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${item.heroTitle} | Yuzuu`,
+      description: item.description,
+      ...(item.image && { images: [`https://www.yuzuu.co${item.image}`] }),
     },
   }
 }
@@ -47,21 +57,43 @@ export default async function Page({ params }: Props) {
 
   if (!item) notFound()
 
+  const siloFaqs = item.faqs ?? FALLBACK_FAQS
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: siloFaqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer.join(' ') },
+    })),
+  }
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.yuzuu.co' },
+      { '@type': 'ListItem', position: 2, name: 'Product Photography', item: 'https://www.yuzuu.co/product-photography' },
+      { '@type': 'ListItem', position: 3, name: item.heroTitle, item: `https://www.yuzuu.co/product-photography/${slug}` },
+    ],
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <SiteNavbar />
 
       <HeroTwoColumnWithPhoto
         id="hero"
         eyebrow={
-          <p className="text-sm/7 font-semibold text-mist-700 dark:text-mist-400">
-            <a
-              href="/product-photography"
-              className="bg-gradient-to-r from-orange-500 to-rose-500 bg-clip-text text-transparent"
-            >
-              ← Product Photography
-            </a>
-          </p>
+          <Breadcrumbs
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'Product Photography', href: '/product-photography' },
+              { label: item.label },
+            ]}
+          />
         }
         headline={item.heroTitle}
         subheadline={<p>{item.description}</p>}

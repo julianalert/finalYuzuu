@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 
 import { ButtonLink, PlainButtonLink, SoftButtonLink } from '@/components/elements/button'
@@ -8,6 +9,11 @@ import { FAQsAccordion, Faq } from '@/components/sections/faqs-accordion'
 import { PlanComparisonTable } from '@/components/sections/plan-comparison-table'
 import { Plan, PricingHeroMultiTier } from '@/components/sections/pricing-hero-multi-tier'
 import { TestimonialTwoColumnWithLargePhoto } from '@/components/sections/testimonial-two-column-with-large-photo'
+
+export const metadata: Metadata = {
+  title: 'Pricing | Yuzuu',
+  robots: { index: false, follow: false },
+}
 
 function plans(option: string) {
   return (

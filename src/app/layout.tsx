@@ -7,9 +7,14 @@ import {
   FooterWithNewsletterFormCategoriesAndSocialIcons,
   SocialLink,
 } from '@/components/sections/footer-with-newsletter-form-categories-and-social-icons'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
 import './globals.css'
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
 
 export const metadata: Metadata = {
   title: 'AI Product Photos that do not look like AI - Yuzuu',
@@ -48,7 +53,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Product Photos that do not look like AI - Yuzuu',
     description:
-      'DFY Ultra-realistic studio & lifestyle photos for e-commerce, without hiring models or booking a studio.',
+      'Ultra-realistic studio & lifestyle photos for e-commerce, without hiring models or booking a studio.',
     creator: '@notanothermrktr',
     images: ['https://www.yuzuu.co/img/thumbnail.png'],
   },
@@ -63,9 +68,31 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const organizationJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Yuzuu',
+    url: 'https://www.yuzuu.co',
+    logo: 'https://www.yuzuu.co/img/thumbnail.png',
+    sameAs: ['https://x.com/juliendvr'],
+    description:
+      'Ultra-realistic AI product photography for e-commerce brands. Studio & lifestyle photos without hiring models or booking a studio.',
+  }
+
+  const websiteJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Yuzuu',
+    url: 'https://www.yuzuu.co',
+  }
+
   return (
     <html lang="en">
       <head>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
+        <link rel="dns-prefetch" href="https://beamanalytics.b-cdn.net" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />

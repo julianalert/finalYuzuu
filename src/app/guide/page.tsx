@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 
 import { Eyebrow } from '@/components/elements/eyebrow'
@@ -10,6 +11,15 @@ import { BrandCard, BrandsCardsMultiColumn } from '@/components/sections/brands-
 import { HeroWithDemoOnBackground } from '@/components/sections/hero-with-demo-on-background'
 import { SiteNavbar } from '@/components/sections/site-navbar'
 import { TestimonialLargeQuote } from '@/components/sections/testimonial-with-large-quote'
+
+export const metadata: Metadata = {
+  title: 'The Complete Guide to AI Product Photography | Yuzuu',
+  description:
+    'Everything you need to know to create ultra-realistic product photos with AI. Free guide covering studio, lifestyle, and product photography techniques.',
+  alternates: {
+    canonical: 'https://www.yuzuu.co/guide',
+  },
+}
 
 const outcomes = [
   'Say no to photographer fees and delays (goodbye the $5k invoice).',

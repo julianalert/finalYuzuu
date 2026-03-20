@@ -1,6 +1,13 @@
+import type { Metadata } from 'next'
+
 import { Link } from '@/components/elements/link'
 import { ArrowNarrowRightIcon } from '@/components/icons/arrow-narrow-right-icon'
 import { HeroSimpleCentered } from '@/components/sections/hero-simple-centered'
+
+export const metadata: Metadata = {
+  title: 'Page Not Found | Yuzuu',
+  robots: { index: false, follow: false },
+}
 
 export default function Page() {
   return (

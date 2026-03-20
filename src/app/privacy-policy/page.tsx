@@ -1,6 +1,15 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import { DocumentCentered } from '@/components/sections/document-centered'
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy | Yuzuu',
+  description: 'Yuzuu privacy policy. Learn how we collect, use, and protect your personal information.',
+  alternates: {
+    canonical: 'https://www.yuzuu.co/privacy-policy',
+  },
+}
 
 export default function Page() {
   return (

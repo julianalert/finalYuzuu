@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 
+import { Breadcrumbs } from '@/components/elements/breadcrumbs'
 import { ButtonLink, SoftButtonLink } from '@/components/elements/button'
 import { Container } from '@/components/elements/container'
 import { BrandCard, BrandsCardsMultiColumn } from '@/components/sections/brands-cards-multi-column'
@@ -31,6 +32,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       title: data.metaTitle,
       description: data.metaDescription,
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: data.metaTitle,
+      description: data.metaDescription,
     },
   }
 }
@@ -40,17 +47,46 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const data = getCompetitorBySlug(slug)
   if (!data) notFound()
 
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: data.faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    })),
+  }
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.yuzuu.co' },
+      { '@type': 'ListItem', position: 2, name: `Yuzuu vs ${data.name}`, item: `https://www.yuzuu.co/alternative-to/${slug}` },
+    ],
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <SiteNavbar />
 
       {/* Hero */}
       <HeroTwoColumnWithPhoto
         eyebrow={
-          <span className="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-emerald-700 ring-1 ring-emerald-200">
-            <span className="size-1.5 rounded-full bg-emerald-400" />
-            {data.heroEyebrow}
-          </span>
+          <div className="flex flex-col gap-3">
+            <Breadcrumbs
+              items={[
+                { label: 'Home', href: '/' },
+                { label: `Yuzuu vs ${data.name}` },
+              ]}
+            />
+            <span className="inline-flex w-fit items-center gap-2 rounded-full bg-emerald-50 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-emerald-700 ring-1 ring-emerald-200">
+              <span className="size-1.5 rounded-full bg-emerald-400" />
+              {data.heroEyebrow}
+            </span>
+          </div>
         }
         headline={
           <>
